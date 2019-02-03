@@ -19,7 +19,7 @@ def tutorial
   puts "-t HomeのTimeline取得"
   puts "-m リプライの取得"
   puts "-l リストの取得"
-  puts "tweetの内容！"
+  puts "tweetの内容を入力後、末尾に！"
 end
 
 # display timeline
