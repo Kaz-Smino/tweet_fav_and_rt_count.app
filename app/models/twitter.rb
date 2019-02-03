@@ -40,7 +40,7 @@ end
 
 # display list
 def listTimeline
-  @client.list_timeline("tanigwsato", "engineer3").each do |tweet|
+  @client.list_timeline("tanigwsato", "engineer3").each do |tweet| ＃tanigwsatoはユーザーID engineer3はリスト名(どちらもURLからコピペした)
     puts "\e[33m" + tweet.user.name + "\e[32m" + "[ID:" + tweet.user.screen_name + "]"
     puts "\e[0m" + tweet.text
   end
