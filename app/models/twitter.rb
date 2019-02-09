@@ -75,4 +75,8 @@ elsif option == "-l" then
 else
   tweet
   homeTimeline
+<<<<<<< HEAD
 end
+=======
+end
+>>>>>>> 5fb69bf58c582229fcff6363ac3c31ea7bf9882c
