@@ -23,7 +23,7 @@ default: &default
 
 development:
   adapter: mysql2
-  encoding: utf8
+  encoding: utf8mb4
   database: app_db
   username: root
   host: 127.0.0.1

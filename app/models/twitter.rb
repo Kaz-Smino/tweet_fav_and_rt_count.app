@@ -28,6 +28,9 @@ def homeTimeline
   @client.home_timeline.each do |tweet|
     puts "\e[33m" + tweet.user.name + "\e[32m" + "[ID:" + tweet.user.screen_name + "]"
     puts "\e[0m" + tweet.text
+    puts "お気に入りの数：#{tweet.favorite_count}"
+    puts "Retweetの数：#{tweet.retweet_count}"
+    puts "TweetのURL：#{tweet.url}"
   end
 end
 
@@ -36,14 +39,20 @@ def mentionTimeline
   @client.mentions_timeline.each do |tweet|
     puts "\e[33m" + tweet.user.name + "\e[32m" + "[ID:" + tweet.user.screen_name + "]"
     puts "\e[0m" + tweet.text
+
   end
 end
 
-# display list
+# display list :tanigwsatoはユーザーID engineer3はリスト名(どちらもURLからコピペした)
 def listTimeline
-  @client.list_timeline("tanigwsato", "engineer3").each do |tweet| ＃tanigwsatoはユーザーID engineer3はリスト名(どちらもURLからコピペした)
+  @client.list_timeline("engineer", count:50).each do |tweet| 
     puts "\e[33m" + tweet.user.name + "\e[32m" + "[ID:" + tweet.user.screen_name + "]"
     puts "\e[0m" + tweet.text
+    puts "↓"
+    puts "tweetされた日付・時刻：#{tweet.created_at}"
+    puts "お気に入りの数：#{tweet.favorite_count}"
+    puts "Retweetの数：#{tweet.retweet_count}"
+    puts "TweetのURL：#{tweet.url}"
   end
 end
 
@@ -67,4 +76,3 @@ else
   tweet
   homeTimeline
 end
-  
