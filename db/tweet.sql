@@ -1,5 +1,6 @@
 CREATE TABLE `tweets` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `tweet_time` datetime NOT NULL,
   `tweet` text NOT NULL,
   `favorite_count` int(11) NOT NULL DEFAULT '0',
   `retweet_count` int(11) NOT NULL DEFAULT '0',
@@ -8,6 +9,5 @@ CREATE TABLE `tweets` (
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL ON UPDATE CURRENT_TIMESTAMP,
   `tweet_id` varchar(255) NOT NULL DEFAULT '',
-  `tweet_time` datetime NOT NULL,
+  `tweet_point` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=505 DEFAULT CHARSET=utf8mb4;
