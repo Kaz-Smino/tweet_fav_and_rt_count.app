@@ -12,11 +12,10 @@ namespace :mysql do
         config.access_token_secret = "qp18SJMMw6TeIULbS0mfIwZMQTwpCla3NcPs9XsoQkKFc"
       end
 
-      last_get_tweet_id = 1094181491335061504   #現時点では最新のtweet.idを仮に代入しているが、データベースに格納された最新tweetのidを代入できるようにしたい 
+      last_get_tweet_id = 1094298953418297344   #現時点では最新のtweet.idを仮に代入しているが、データベースに格納された最新tweetのidを代入できるようにしたい 
       @client.list_timeline("engineer", count:1000, since_id:last_get_tweet_id).each do |tweet| 
         unless tweet.retweet? 
           unless tweet.reply?
-            if tweet.favorite_count > 0 || tweet.retweet_count > 0
               Tweet.create(tweet: tweet.full_text, user_name: tweet.user.screen_name, 
                            favorite_count: tweet.favorite_count, retweet_count: tweet.retweet_count, 
                            tweet_point: tweet.favorite_count + tweet.retweet_count,
@@ -24,7 +23,6 @@ namespace :mysql do
 
               last_get_tweet_id = tweet.id
               puts "最後に取得したTweetのid：#{last_get_tweet_id}"  #デバッグ用
-            end
           end
         end
       end
