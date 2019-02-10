@@ -12,7 +12,7 @@ namespace :mysql do
         config.access_token_secret = ""
       end
 
-      last_get_tweet_id = 1094298953418297344   #現時点では最新のtweet.idを仮に代入しているが、データベースに格納された最新tweetのidを代入できるようにしたい 
+      last_get_tweet_id = 1094298953418297344   #`last` メソッドを使って実装する
       @client.list_timeline("engineer", count:1000, since_id:last_get_tweet_id).each do |tweet| 
         unless tweet.retweet? 
           unless tweet.reply?
