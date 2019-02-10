@@ -62,8 +62,12 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
+<<<<<<< HEAD
 gem 'twitter', '~> 6.2'
 
 gem 'mysql2', '~> 0.5.2'
 
 gem 'pry', '~> 0.10.3'
+=======
+gem 'twitter', '~> 6.2'
+>>>>>>> origin/master

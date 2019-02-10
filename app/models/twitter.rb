@@ -1,4 +1,3 @@
-
 #!/usr/bin/ruby
 # encoding: utf-8
 
@@ -20,7 +19,7 @@ def tutorial
   puts "-t HomeのTimeline取得"
   puts "-m リプライの取得"
   puts "-l リストの取得"
-  puts "tweetの内容を入力後、末尾に！"
+  puts "tweetの内容！"
 end
 
 # display timeline
@@ -45,7 +44,11 @@ end
 
 # display list :tanigwsatoはユーザーID engineer3はリスト名(どちらもURLからコピペした)
 def listTimeline
+<<<<<<< HEAD
   @client.list_timeline("engineer", count:50).each do |tweet| 
+=======
+  @client.list_timeline("tanigwsato", "engineer3").each do |tweet|
+>>>>>>> origin/master
     puts "\e[33m" + tweet.user.name + "\e[32m" + "[ID:" + tweet.user.screen_name + "]"
     puts "\e[0m" + tweet.text
     puts "↓"
@@ -76,7 +79,11 @@ else
   tweet
   homeTimeline
 <<<<<<< HEAD
+<<<<<<< HEAD
 end
 =======
 end
 >>>>>>> 5fb69bf58c582229fcff6363ac3c31ea7bf9882c
+=======
+end
+>>>>>>> origin/master

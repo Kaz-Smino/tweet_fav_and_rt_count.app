@@ -15,16 +15,5 @@ module TweetFavAndRtCount
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
-
-    # Only loads a smaller set of middleware suitable for API only apps.
-    # Middleware like session, flash, cookies can be added back manually.
-    # Skip views, helpers and assets when generating a new resource.
-    config.api_only = true
-
-    ### Railsが表示の際に扱うタイムゾーン ←ココ
-    config.time_zone = 'Tokyo'
-
-    ### Rails(Activerecord)がDBへのRead・Writeを行う際タイムゾーン ←ココ
-    config.active_record.default_timezone = :local 
   end
 end
