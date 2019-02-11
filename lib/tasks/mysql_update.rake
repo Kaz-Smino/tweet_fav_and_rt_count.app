@@ -6,10 +6,10 @@ namespace :mysql_update do
       require 'twitter'
 
       @client = Twitter::REST::Client.new do |config|
-        config.consumer_key        = "9mQdXvpBwT2PoBlcyCq4tG8Lm"
-        config.consumer_secret     = "qRCPkoLaKpICapdVInLf5490C4PnYAgbBP0xzIQRCMtuJeehit"
-        config.access_token        = "2492127391-tks07Xxw3s8kuiA6IuPGRWYUxr1eNFL7E2qWT0r"
-        config.access_token_secret = "qp18SJMMw6TeIULbS0mfIwZMQTwpCla3NcPs9XsoQkKFc"
+        config.consumer_key        = ""
+        config.consumer_secret     = ""
+        config.access_token        = ""
+        config.access_token_secret = ""
       end
 
       last_tweet = Tweet.last #tweetsテーブルの最後のレコードを取得(つまり最新のtweetのレコード)
