@@ -15,5 +15,9 @@ module TweetFavAndRtCount
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
+
+    #DBへの保存はJSTで画面表示もJST(日本時間)
+    config.time_zone = 'Tokyo'
+    config.active_record.default_timezone = :local 
   end
 end
