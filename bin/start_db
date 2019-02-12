@@ -7,16 +7,19 @@
 #
 
 FORCE_START=0
+PORT=43306
 
 usage_exit() {
-  echo "Usage: $0 [-f]" 1>&2
+  echo "Usage: $0 [-f] [-p port]" 1>&2
   exit 1
 }
 
-while getopts fh OPT
+while getopts fp:h OPT
 do
     case $OPT in
         f)  FORCE_START=1
+            ;;
+        p)  PORT=$OPTARG
             ;;
         h)  usage_exit
             ;;
@@ -39,5 +42,5 @@ fi
     -e MYSQL_ALLOW_EMPTY_PASSWORD=yes \
     -e TZ=Asia/Tokyo \
     -d \
-    -p 53306:3306 \
+    -p $PORT:3306 \
     mysql:5.7

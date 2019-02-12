@@ -7,6 +7,12 @@
 $ cp .env_sample .env
 ```
 
+DockerでMySQLを起動することができます。デフォルトは43006ポートで起動します。
+
+```
+$ ./bin/start_db -f
+```
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
