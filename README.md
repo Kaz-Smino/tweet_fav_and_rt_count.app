@@ -1,5 +1,12 @@
 # README
 
+## Configuration
+開発環境では`.env`ファイルを作成してください。`.env`ファイルに定義された値は環境変数として読み込まれます。
+
+```
+$ cp .env_sample .env
+```
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
