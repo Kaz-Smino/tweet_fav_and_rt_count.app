@@ -10,7 +10,6 @@ default: &default
   timeout: 5000
 
 development:
-<<<<<<< HEAD
   adapter: mysql2
   encoding: utf8mb4
   database: app_db
@@ -19,10 +18,9 @@ development:
   port: 43306
   pool: 5
   timeout: 5000
-=======
+
   <<: *default
   database: db/development.sqlite3
->>>>>>> origin/master
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".

@@ -2,14 +2,13 @@ namespace :mysql do
   desc "データベース(MySQL)にデータを登録するタスク"
   task add_data: :environment do
     class Tweet < ApplicationRecord
-
       require 'twitter'
 
       @client = Twitter::REST::Client.new do |config|
-        config.consumer_key        = ""
-        config.consumer_secret     = ""
-        config.access_token        = ""
-        config.access_token_secret = ""
+        config.consumer_key        = TWITTER_CONSUMER_KEY
+        config.consumer_secret     = TWITTER_CONSUMER_SECRET
+        config.access_token        = TWITTER_ACCESS_TOKEN
+        config.access_token_secret = TWITTER_ACCESS_TOKEN_SECRET
       end
 
       last_get_tweet_id = 1094298953418297344   #現時点では最新のtweet.idを仮に代入しているが、データベースに格納された最新tweetのidを代入できるようにしたい 
