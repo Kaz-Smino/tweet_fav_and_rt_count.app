@@ -1,0 +1,43 @@
+#!/bin/bash
+#
+# DockerでMySQLを起動するスクリプトです。
+#
+# Option
+# -f すでにイメージが存在する場合は削除して起動します。
+#
+
+FORCE_START=0
+
+usage_exit() {
+  echo "Usage: $0 [-f]" 1>&2
+  exit 1
+}
+
+while getopts fh OPT
+do
+    case $OPT in
+        f)  FORCE_START=1
+            ;;
+        h)  usage_exit
+            ;;
+        \?) usage_exit
+            ;;
+    esac
+done
+
+if [ $FORCE_START = "1" ]; then
+  # 既に起動していたら停止
+  /usr/local/bin/docker container stop appdb > /dev/null 2>&1
+
+  # 起動していたプロセスの削除
+  /usr/local/bin/docker container rm appdb > /dev/null 2>&1
+fi
+
+/usr/local/bin/docker run --name appdb \
+    -v $(pwd)/db:/docker-entrypoint-initdb.d \
+    -e MYSQL_DATABASE=app_db \
+    -e MYSQL_ALLOW_EMPTY_PASSWORD=yes \
+    -e TZ=Asia/Tokyo \
+    -d \
+    -p 53306:3306 \
+    mysql:5.7
