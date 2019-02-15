@@ -9,17 +9,11 @@ namespace :mysql do
         config.consumer_secret = TWITTER_CONSUMER_SECRET
         config.access_token = TWITTER_ACCESS_TOKEN
         config.access_token_secret = TWITTER_ACCESS_TOKEN_SECRET
-
-        # config.consumer_key        = ""
-        # config.consumer_secret     = ""
-        # config.access_token        = ""
-        # config.access_token_secret = ""
       end
 
       last_tweet = Tweet.last #tweetsテーブルの最後のレコードを取得(つまり最新のtweetのレコード)
       last_tweet_id = last_tweet.tweet_id # tweet_idを取得
 
-      # last_tweet_id = 1094541232783515648
 
       count_add_new_tweet = 0 #データベースに新規追加されるtweetの件数
 
