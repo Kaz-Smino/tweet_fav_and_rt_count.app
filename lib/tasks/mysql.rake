@@ -11,17 +11,14 @@ namespace :mysql do
         config.access_token_secret = TWITTER_ACCESS_TOKEN_SECRET
       end
 
-      last_tweet = Tweet.last #tweetsテーブルの最後のレコードを取得(つまり最新のtweetのレコード)
-      last_tweet_id = last_tweet.tweet_id # tweet_idを取得
+      last_tweet = Tweet.last
+      last_tweet_id = last_tweet.tweet_id
 
 
-      count_add_new_tweet = 0 #データベースに新規追加されるtweetの件数
+      count_add_new_tweet = 0
 
 
-      #engineerリストのtweetで、既にDB登録済みの最も新しいtweet以降で、RTとリプライは除いてた要素を取得。reverse_eachを使うことで逆順に(古い順)にデータベースに登録させる。
-      #それにより、DBの最後のレコードのtweet.idは常に最新のtweet.id(last_tweet_id)になる。
       @client.list_timeline("engineer", count:1000, since_id:last_tweet_id).reverse_each do |tweet|  
-        puts "list!"
         unless tweet.retweet? 
           unless tweet.reply?
             Tweet.create(tweet: tweet.full_text, user_name: tweet.user.screen_name, 
@@ -39,6 +36,40 @@ namespace :mysql do
       else 
         puts "新しいtweetが#{count_add_new_tweet}件データベースに追加されました"
       end
+    end
+  end
+
+  desc "データベース(MySQL)のお気に入りとRTのデータを更新するタスク"
+  task update_data: :environment do
+    class Tweet < ApplicationRecord
+      require 'twitter'
+      require 'date'
+
+      @client = Twitter::REST::Client.new do |config|
+        config.consumer_key = TWITTER_CONSUMER_KEY
+        config.consumer_secret = TWITTER_CONSUMER_SECRET
+        config.access_token = TWITTER_ACCESS_TOKEN
+        config.access_token_secret = TWITTER_ACCESS_TOKEN_SECRET
+      end
+
+      tweets = Tweet.where("created_at >= ?", Date.today.weeks_ago(1))
+
+      since_id = tweets.first.tweet_id
+      max_id = tweets.last.tweet_id
+
+      latest_tweets = @client.list_timeline("engineer", count:1000, max_id:max_id)
+
+      latest_tweets.each do |lt|
+        @count_update_tweet = 0
+        update_tweets = Tweet.find_by(tweet_id: lt.id)
+        unless update_tweets.nil?
+          tweet = Tweet.where(tweet_id: update_tweets.tweet_id)
+          tweet.update(favorite_count: lt.favorite_count)
+          tweet.update(retweet_count: lt.retweet_count)
+          @count_update_tweet += 1
+        end
+      end
+      puts "#{@count_update_tweet}件のtweet(お気に入り&RT数)が更新されました"
     end
   end
 end
