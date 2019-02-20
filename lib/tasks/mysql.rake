@@ -59,8 +59,9 @@ namespace :mysql do
 
       latest_tweets = @client.list_timeline("engineer", count:1000, max_id:max_id)
 
+      @count_update_tweet = 0
+
       latest_tweets.each do |lt|
-        @count_update_tweet = 0
         update_tweets = Tweet.find_by(tweet_id: lt.id)
         unless update_tweets.nil?
           tweet = Tweet.where(tweet_id: update_tweets.tweet_id)
