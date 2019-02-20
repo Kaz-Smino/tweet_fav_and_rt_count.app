@@ -20,10 +20,10 @@
 # Learn more: http://github.com/javan/whenever
 
 
-every 1.day, at: '7:15 am' do
+every 1.day, at: '7:20 am' do
   rake "mysql.rake:add_data"
 end
 
-every 1.day, at: '7:20 am' do
+every 1.day, at: '7:25 am' do
   rake "mysql.rake:update_data"
 end
