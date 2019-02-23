@@ -61,8 +61,13 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'twitter', '~> 6.2'
 
-gem 'mysql2', '~> 0.5.2'
+gem 'mysql2', '~> 0.5.2', groups: [:development, :test]
 
 gem 'pry', '~> 0.10.3'
 
 gem 'dotenv-rails', groups: [:development, :test]
+
+
+group :production do
+  gem 'pg'
+end
