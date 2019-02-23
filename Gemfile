@@ -65,7 +65,7 @@ gem 'mysql2', '~> 0.5.2', groups: [:development, :test]
 
 gem 'pry', '~> 0.10.3'
 
-gem 'dotenv-rails', groups: [:development, :test]
+gem 'dotenv-rails'
 
 
 group :production do
