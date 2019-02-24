@@ -2,6 +2,7 @@ class CreateTweets < ActiveRecord::Migration[5.2]
   def change
     create_table :tweets do |t|
       t.int :id
+      t.datetime :tweet_time
       t.text :tweet
       t.int :favorite_count
       t.int :retweet_count
