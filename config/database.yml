@@ -38,4 +38,5 @@ production:
   <<: *default
   adapter: postgresql
   host: <%= ENV['MYAPP_DATABASE_HOST'] %>
+  username: <%= ENV['MYAPP_DATABASE_USER'] %>
   password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
