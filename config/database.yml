@@ -16,6 +16,8 @@ default: &default
 development:
   <<: *default
   port: 43306
+  database: app_db
+  username: root
 
 # development:
 #   <<: *default
