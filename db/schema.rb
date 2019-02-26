@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_24_051143) do
+ActiveRecord::Schema.define(version: 2019_02_26_135436) do
 
   create_table "tweets", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.datetime "tweet_time"
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2019_02_24_051143) do
     t.string "tweet_url"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer "tweet_id"
+    t.text "tweet_id"
     t.integer "tweet_point"
   end
 
