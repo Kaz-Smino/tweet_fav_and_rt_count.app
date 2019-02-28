@@ -9,7 +9,7 @@ class CreateTweets < ActiveRecord::Migration[5.2]
       t.text :tweet_url
       t.datetime :created_at
       t.datetime :updated_at
-      t.text	 :tweet_id
+      t.string	 :tweet_id
       t.integer :tweet_point
     end
 
