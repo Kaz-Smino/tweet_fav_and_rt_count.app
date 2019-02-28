@@ -14,6 +14,7 @@ namespace :mysql do
       last_tweet = Tweet.last
       last_tweet_id = last_tweet.tweet_id
 
+      puts last_tweet_id
 
       count_add_new_tweet = 0
 

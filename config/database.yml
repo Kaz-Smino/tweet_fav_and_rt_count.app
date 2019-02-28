@@ -6,28 +6,39 @@
 #
 default: &default
   adapter: mysql2
+  encoding: utf8mb4
+  username: myapp
+  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
+  host: 127.0.0.1
 
 development:
   <<: *default
-  encoding: utf8mb4
+  port: 43306
   database: app_db
   username: root
-  host: 127.0.0.1
-  port: 43306
-  pool: 5
-  timeout: 5000
+
+# development:
+#   <<: *default
+#   encoding: utf8mb4
+#   database: app_db
+#   username: root
+#   host: 127.0.0.1
+#   port: 43306
+#   pool: 5
+#   timeout: 5000
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
+  port: 43306
 
 production:
   <<: *default
   adapter: postgresql
-  encoding: utf8mb4
-  username: myapp
+  host: <%= ENV['MYAPP_DATABASE_HOST'] %>
+  username: <%= ENV['MYAPP_DATABASE_USER'] %>
   password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
