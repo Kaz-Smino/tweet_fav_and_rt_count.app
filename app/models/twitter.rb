@@ -44,11 +44,7 @@ end
 
 # display list :tanigwsatoはユーザーID engineer3はリスト名(どちらもURLからコピペした)
 def listTimeline
-<<<<<<< HEAD
   @client.list_timeline("engineer", count:50).each do |tweet| 
-=======
-  @client.list_timeline("tanigwsato", "engineer3").each do |tweet|
->>>>>>> origin/master
     puts "\e[33m" + tweet.user.name + "\e[32m" + "[ID:" + tweet.user.screen_name + "]"
     puts "\e[0m" + tweet.text
     puts "↓"
