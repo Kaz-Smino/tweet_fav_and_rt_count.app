@@ -12,17 +12,18 @@
 
 ActiveRecord::Schema.define(version: 2019_02_26_142603) do
 
-  create_table "tweets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.datetime "tweet_time"
-    t.text "tweet"
-    t.integer "favorite_count"
-    t.integer "retweet_count"
-    t.string "user_name"
-    t.text "tweet_url"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string "tweet_id"
-    t.integer "tweet_point"
+  create_table "tweets", id: :integer, unsigned: true, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.datetime "tweet_time", null: false
+    t.text "tweet", null: false
+    t.integer "favorite_count", default: 0, null: false
+    t.integer "retweet_count", default: 0, null: false
+    t.string "user_name", default: "", null: false
+    t.text "tweet_url", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "tweet_id", default: "", null: false
+    t.integer "tweet_point", default: 0, null: false
+    t.string "user_image", default: "", null: false
   end
 
 end
