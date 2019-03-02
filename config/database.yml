@@ -6,9 +6,7 @@
 #
 default: &default
   adapter: mysql2
-  # encoding: utf8mb4
-  # encoding: unicode
-  encoding: utf-8
+  encoding: utf8mb4
   username: myapp
   password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
@@ -40,6 +38,7 @@ test:
 
 production:
   <<: *default
+  encoding: utf-8
   adapter: postgresql
   host: <%= ENV['MYAPP_DATABASE_HOST'] %>
   username: <%= ENV['MYAPP_DATABASE_USER'] %>
