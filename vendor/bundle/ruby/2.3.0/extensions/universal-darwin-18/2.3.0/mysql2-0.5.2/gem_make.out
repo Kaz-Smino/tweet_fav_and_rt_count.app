@@ -1,5 +1,9 @@
 current directory: /Users/kazuyasumino/Documents/ruby_on_rails/environment/tweet_fav_and_rt_count/vendor/bundle/ruby/2.3.0/gems/mysql2-0.5.2/ext/mysql2
+<<<<<<< HEAD
 /System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/bin/ruby -r ./siteconf20190302-2083-1mo68vu.rb extconf.rb --with-ldflags=-L/usr/local/opt/openssl/lib --with-cppflags=-I/usr/local/opt/openssl/include
+=======
+/System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/bin/ruby -r ./siteconf20190302-57195-1ag8lhd.rb extconf.rb --with-opt-lib=/usr/local/opt/openssl/lib --with-opt-include=-I/usr/local/opt/openssl/include
+>>>>>>> cfca4ad368688cb19ea6c619b918aef959ff6f88
 checking for rb_absint_size()... yes
 checking for rb_absint_singlebit_p()... yes
 checking for rb_wait_for_single_fd()... yes
@@ -45,4 +49,8 @@ linking shared-object mysql2/mysql2.bundle
 
 current directory: /Users/kazuyasumino/Documents/ruby_on_rails/environment/tweet_fav_and_rt_count/vendor/bundle/ruby/2.3.0/gems/mysql2-0.5.2/ext/mysql2
 make "DESTDIR=" install
+<<<<<<< HEAD
 /usr/bin/install -c -m 0755 mysql2.bundle ./.gem.20190302-2083-cjmf6a/mysql2
+=======
+/usr/bin/install -c -m 0755 mysql2.bundle ./.gem.20190302-57195-7mf73i/mysql2
+>>>>>>> cfca4ad368688cb19ea6c619b918aef959ff6f88

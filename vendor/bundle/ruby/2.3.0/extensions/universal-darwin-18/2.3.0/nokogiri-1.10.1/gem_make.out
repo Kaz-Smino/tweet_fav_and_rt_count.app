@@ -1,5 +1,9 @@
 current directory: /Users/kazuyasumino/Documents/ruby_on_rails/environment/tweet_fav_and_rt_count/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.10.1/ext/nokogiri
+<<<<<<< HEAD
 /System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/bin/ruby -r ./siteconf20190302-2083-8yyjo7.rb extconf.rb
+=======
+/System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/bin/ruby -r ./siteconf20190302-36412-1e6undp.rb extconf.rb
+>>>>>>> cfca4ad368688cb19ea6c619b918aef959ff6f88
 checking if the C compiler accepts  -I /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/libxml2... yes
 checking if the C compiler accepts -Wno-error=unused-command-line-argument-hard-error-in-future... no
 Building nokogiri using packaged libraries.
@@ -128,4 +132,8 @@ rm -rf /Users/kazuyasumino/Documents/ruby_on_rails/environment/tweet_fav_and_rt_
 
 current directory: /Users/kazuyasumino/Documents/ruby_on_rails/environment/tweet_fav_and_rt_count/vendor/bundle/ruby/2.3.0/gems/nokogiri-1.10.1/ext/nokogiri
 make "DESTDIR=" install
+<<<<<<< HEAD
 /usr/bin/install -c -m 0755 nokogiri.bundle ./.gem.20190302-2083-ng4lrp/nokogiri
+=======
+/usr/bin/install -c -m 0755 nokogiri.bundle ./.gem.20190302-36412-k62h7y/nokogiri
+>>>>>>> cfca4ad368688cb19ea6c619b918aef959ff6f88

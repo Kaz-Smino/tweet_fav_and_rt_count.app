@@ -1,5 +1,9 @@
 current directory: /Users/kazuyasumino/Documents/ruby_on_rails/environment/tweet_fav_and_rt_count/vendor/bundle/ruby/2.3.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+<<<<<<< HEAD
 /System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/bin/ruby -r ./siteconf20190302-2083-1se04sq.rb extconf.rb
+=======
+/System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/bin/ruby -r ./siteconf20190302-36412-qk0pwa.rb extconf.rb
+>>>>>>> cfca4ad368688cb19ea6c619b918aef959ff6f88
 creating Makefile
 
 current directory: /Users/kazuyasumino/Documents/ruby_on_rails/environment/tweet_fav_and_rt_count/vendor/bundle/ruby/2.3.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
@@ -13,4 +17,8 @@ linking shared-object ruby_http_parser.bundle
 
 current directory: /Users/kazuyasumino/Documents/ruby_on_rails/environment/tweet_fav_and_rt_count/vendor/bundle/ruby/2.3.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
 make "DESTDIR=" install
+<<<<<<< HEAD
 /usr/bin/install -c -m 0755 ruby_http_parser.bundle ./.gem.20190302-2083-mczs2q
+=======
+/usr/bin/install -c -m 0755 ruby_http_parser.bundle ./.gem.20190302-36412-1rz8yf9
+>>>>>>> cfca4ad368688cb19ea6c619b918aef959ff6f88

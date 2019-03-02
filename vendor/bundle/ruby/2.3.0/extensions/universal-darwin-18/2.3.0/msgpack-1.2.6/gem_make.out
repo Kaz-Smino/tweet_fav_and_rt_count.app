@@ -1,5 +1,9 @@
 current directory: /Users/kazuyasumino/Documents/ruby_on_rails/environment/tweet_fav_and_rt_count/vendor/bundle/ruby/2.3.0/gems/msgpack-1.2.6/ext/msgpack
+<<<<<<< HEAD
 /System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/bin/ruby -r ./siteconf20190302-2083-1rsklzp.rb extconf.rb
+=======
+/System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/bin/ruby -r ./siteconf20190302-36412-17lj2na.rb extconf.rb
+>>>>>>> cfca4ad368688cb19ea6c619b918aef959ff6f88
 checking for ruby/st.h... yes
 checking for st.h... yes
 checking for rb_str_replace() in ruby.h... yes
@@ -40,4 +44,8 @@ linking shared-object msgpack/msgpack.bundle
 
 current directory: /Users/kazuyasumino/Documents/ruby_on_rails/environment/tweet_fav_and_rt_count/vendor/bundle/ruby/2.3.0/gems/msgpack-1.2.6/ext/msgpack
 make "DESTDIR=" install
+<<<<<<< HEAD
 /usr/bin/install -c -m 0755 msgpack.bundle ./.gem.20190302-2083-1gqgujk/msgpack
+=======
+/usr/bin/install -c -m 0755 msgpack.bundle ./.gem.20190302-36412-72hjsm/msgpack
+>>>>>>> cfca4ad368688cb19ea6c619b918aef959ff6f88

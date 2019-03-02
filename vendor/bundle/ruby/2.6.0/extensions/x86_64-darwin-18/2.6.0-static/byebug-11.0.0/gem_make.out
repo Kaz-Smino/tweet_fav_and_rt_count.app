@@ -1,0 +1,19 @@
+current directory: /Users/kazuyasumino/Documents/ruby_on_rails/environment/tweet_fav_and_rt_count/vendor/bundle/ruby/2.6.0/gems/byebug-11.0.0/ext/byebug
+/Users/kazuyasumino/.rbenv/versions/2.6.0/bin/ruby -I /Users/kazuyasumino/.rbenv/versions/2.6.0/lib/ruby/2.6.0 -r ./siteconf20190302-62507-udmndy.rb extconf.rb
+creating Makefile
+
+current directory: /Users/kazuyasumino/Documents/ruby_on_rails/environment/tweet_fav_and_rt_count/vendor/bundle/ruby/2.6.0/gems/byebug-11.0.0/ext/byebug
+make "DESTDIR=" clean
+
+current directory: /Users/kazuyasumino/Documents/ruby_on_rails/environment/tweet_fav_and_rt_count/vendor/bundle/ruby/2.6.0/gems/byebug-11.0.0/ext/byebug
+make "DESTDIR="
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.bundle
+
+current directory: /Users/kazuyasumino/Documents/ruby_on_rails/environment/tweet_fav_and_rt_count/vendor/bundle/ruby/2.6.0/gems/byebug-11.0.0/ext/byebug
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 byebug.bundle ./.gem.20190302-62507-j85si0/byebug

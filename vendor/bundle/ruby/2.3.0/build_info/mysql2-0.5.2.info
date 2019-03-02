@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 --with-ldflags=-L/usr/local/opt/openssl/lib --with-cppflags=-I/usr/local/opt/openssl/include
+=======
+--with-opt-lib=/usr/local/opt/openssl/lib --with-opt-include=-I/usr/local/opt/openssl/include
+>>>>>>> cfca4ad368688cb19ea6c619b918aef959ff6f88

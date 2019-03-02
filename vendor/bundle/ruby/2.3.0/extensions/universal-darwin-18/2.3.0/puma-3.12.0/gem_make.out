@@ -1,5 +1,9 @@
 current directory: /Users/kazuyasumino/Documents/ruby_on_rails/environment/tweet_fav_and_rt_count/vendor/bundle/ruby/2.3.0/gems/puma-3.12.0/ext/puma_http11
+<<<<<<< HEAD
 /System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/bin/ruby -r ./siteconf20190302-2083-17f8vfd.rb extconf.rb
+=======
+/System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/bin/ruby -r ./siteconf20190302-57195-gpthns.rb extconf.rb
+>>>>>>> cfca4ad368688cb19ea6c619b918aef959ff6f88
 checking for BIO_read() in -lcrypto... no
 checking for BIO_read() in -llibeay32... no
 creating Makefile
@@ -22,4 +26,8 @@ ld: warning: directory not found for option '-L/Applications/Xcode.app/Contents/
 
 current directory: /Users/kazuyasumino/Documents/ruby_on_rails/environment/tweet_fav_and_rt_count/vendor/bundle/ruby/2.3.0/gems/puma-3.12.0/ext/puma_http11
 make "DESTDIR=" install
+<<<<<<< HEAD
 /usr/bin/install -c -m 0755 puma_http11.bundle ./.gem.20190302-2083-jyn6hs/puma
+=======
+/usr/bin/install -c -m 0755 puma_http11.bundle ./.gem.20190302-57195-9ln560/puma
+>>>>>>> cfca4ad368688cb19ea6c619b918aef959ff6f88
