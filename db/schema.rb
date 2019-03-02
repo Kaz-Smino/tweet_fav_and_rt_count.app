@@ -12,13 +12,13 @@
 
 ActiveRecord::Schema.define(version: 2019_02_26_142603) do
 
-  create_table "tweets", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "tweets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.datetime "tweet_time"
     t.text "tweet"
     t.integer "favorite_count"
     t.integer "retweet_count"
     t.string "user_name"
-    t.string "tweet_url"
+    t.text "tweet_url"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string "tweet_id"
