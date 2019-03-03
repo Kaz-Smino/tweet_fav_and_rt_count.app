@@ -61,7 +61,7 @@ namespace :mysql do
     since_id = tweets.first.tweet_id
     max_id = tweets.last.tweet_id
 
-    latest_tweets = @client.list_timeline("engineer", count:1000, max_id:max_id, tweet_mode: 'extended')
+    latest_tweets = @client.list_timeline("engineer", count:1000, max_id:max_id)
 
     @count_update_tweet = 0
 
