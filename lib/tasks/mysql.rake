@@ -69,7 +69,6 @@ namespace :mysql do
       update_tweets = Tweet.find_by(tweet_id: lt.id)
       unless update_tweets.nil?
         tweet = Tweet.where(tweet_id: update_tweets.tweet_id)
-        tweet.update(tweet: lt.full_text)
         tweet.update(favorite_count: lt.favorite_count)
         tweet.update(retweet_count: lt.retweet_count)
         tweet.update(tweet_point: lt.favorite_count + lt.retweet_count)
