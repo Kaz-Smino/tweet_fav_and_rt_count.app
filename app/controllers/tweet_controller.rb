@@ -1,5 +1,5 @@
 class TweetController < ApplicationController
-  PER = 50
+  PER = 10
 
   def index
     @tweets = Tweet.order(tweet_point: :desc).limit(100).page(params[:page]).per(PER)
