@@ -4,7 +4,8 @@
 </head>
 <body>
     <% @count = 1 %>
-    
+
+    <%= paginate @tweets %><br>
     <% @tweets.each do |tweet| %>
         ランキング：<%=@count%>位<br>
         ユーザー名：<%= link_to "#{tweet.name}", "#{tweet.url}" %><br>
@@ -15,4 +16,5 @@
         <% @count += 1 %>
         <hr>
     <% end %>
+    <%= paginate @tweets %>
 </body>
