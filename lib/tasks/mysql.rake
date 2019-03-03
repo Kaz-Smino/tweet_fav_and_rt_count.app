@@ -22,7 +22,7 @@ namespace :mysql do
     count_add_new_tweet = 0
 
 
-    @client.list_timeline("engineer", count:1000, since_id:last_tweet_id, tweet_mode: 'extended').reverse_each do |tweet|  
+    @client.list_timeline("engineer", count:1000, since_id:last_tweet_id).reverse_each do |tweet|  
       unless tweet.retweet? 
         unless tweet.reply?
           Tweet.create(tweet: tweet.full_text, user_name: tweet.user.screen_name, 
