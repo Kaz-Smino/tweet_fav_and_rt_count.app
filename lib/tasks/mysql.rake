@@ -22,7 +22,7 @@ namespace :mysql do
     count_add_new_tweet = 0
 
 
-    @client.list_timeline("engineer", count:1000, since_id:last_tweet_id).reverse_each do |tweet|  
+    @client.list_timeline("engineer", count:1000, since_id:last_tweet_id, tweet_mode: 'extended').reverse_each do |tweet|  
       unless tweet.retweet? 
         unless tweet.reply?
           Tweet.create(tweet: tweet.full_text, user_name: tweet.user.screen_name, 
@@ -61,7 +61,7 @@ namespace :mysql do
     since_id = tweets.first.tweet_id
     max_id = tweets.last.tweet_id
 
-    latest_tweets = @client.list_timeline("engineer", count:1000, max_id:max_id)
+    latest_tweets = @client.list_timeline("engineer", count:1000, max_id:max_id, tweet_mode: 'extended')
 
     @count_update_tweet = 0
 
@@ -69,6 +69,7 @@ namespace :mysql do
       update_tweets = Tweet.find_by(tweet_id: lt.id)
       unless update_tweets.nil?
         tweet = Tweet.where(tweet_id: update_tweets.tweet_id)
+        tweet.update(tweet: lt.full_text)
         tweet.update(favorite_count: lt.favorite_count)
         tweet.update(retweet_count: lt.retweet_count)
         tweet.update(tweet_point: lt.favorite_count + lt.retweet_count)
