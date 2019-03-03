@@ -8,6 +8,7 @@
     <% @tweets.each do |tweet| %>
         ランキング：<%=@count%>位<br>
         ユーザー名：<%= tweet.name %><br>
+        <%= link_to "#{tweet.name}", "#{tweet.url}" %>
         <img src="<%= tweet.user_image %>" alt="プロフィール画像"><br>
         tweetされた日時：<%= tweet.tweet_time %><br>
         内容：<%= tweet.tweet %><br>
