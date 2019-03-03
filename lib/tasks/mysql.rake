@@ -29,7 +29,7 @@ namespace :mysql do
                         favorite_count: tweet.favorite_count, retweet_count: tweet.retweet_count, 
                         tweet_point: tweet.favorite_count + tweet.retweet_count,
                         tweet_url: tweet.url, tweet_id: tweet.id, tweet_time: tweet.created_at,
-                        user_image: tweet.user.profile_image_url)
+                        user_image: tweet.user.profile_image_url, name: weet.user.name)
             
           count_add_new_tweet += 1
         end
