@@ -9,11 +9,9 @@
         ランキング：<%=@count%>位<br>
         ユーザー名：<%= link_to "#{tweet.name}", "#{tweet.url}" %><br>
         <img src="<%= tweet.user_image %>" alt="プロフィール画像"><br>
-        内容：<%= link_to "#{tweet.tweet}", "#{tweet.tweet_url}" %><br>
-        tweetされた日時：<%= tweet.tweet_time %><br>
-        内容：<%= tweet.tweet %><br>
+        <%= tweet.tweet_time %><br>
+        <%= link_to "#{tweet.tweet}", "#{tweet.tweet_url}" %><br>
         お気に入りとRTの数：<%= tweet.tweet_point %><br>
-        URL:<%= tweet.tweet_url %><br>
         <% @count += 1 %>
         <hr>
     <% end %>
