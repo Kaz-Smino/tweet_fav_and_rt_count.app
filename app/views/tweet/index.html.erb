@@ -7,10 +7,10 @@
 
     <% @tweets.each do |tweet| %>
         ランキング：<%=@count%>位<br>
+        ユーザー名：<%= tweet.name %><br>
         <img src="<%= tweet.user_image %>" alt="プロフィール画像"><br>
         tweetされた日時：<%= tweet.tweet_time %><br>
         内容：<%= tweet.tweet %><br>
-        ユーザー名：<%= tweet.user_name %><br>
         お気に入りとRTの数：<%= tweet.tweet_point %><br>
         URL:<%= tweet.tweet_url %><br>
         <% @count += 1 %>
