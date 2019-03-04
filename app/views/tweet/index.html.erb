@@ -3,6 +3,7 @@
     <link rel="stylesheet" href="members.scss" type="text/css">
 </head>
 <body>
+    <h2> 現在 <%= current_user.name %> さんがログインしています </h2><br>
     <%= link_to "ログアウトする", destroy_user_session_path, method: :delete %><br>
     <% @count = 1 %>
 
