@@ -6,7 +6,6 @@
     <h2> 現在 <%= current_user.name %> さんがログインしています </h2><br>
     <%= link_to "ログアウトする", destroy_user_session_path, method: :delete %><br>
     <% @count = @tweets.offset_value + 1 %>
-    <%= @tweets.offset_value%><br>
 
     <%= paginate @tweets %><br>
     <% @tweets.each do |tweet| %>
