@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   end
   
   def after_sign_out_path_for(resource)
-    tweet_index_path
+    root_index_path
   end
 
 end
