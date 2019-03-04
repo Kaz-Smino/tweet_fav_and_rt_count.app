@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="members.scss" type="text/css">
 </head>
 <body>
-    <%= link_to "ログアウトする", destroy_user_session_path, method: :delete %> 
+    <%= link_to "ログアウトする", destroy_user_session_path, method: :delete %><br>
     <% @count = 1 %>
 
     <%= paginate @tweets %><br>
