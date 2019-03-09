@@ -8,7 +8,6 @@
     <% @count = @tweets.offset_value + 1 %>
 
     <%= paginate @tweets %><br>
-    <div class="p-top_paginate"><%= paginate(@tweets) %></div>
     <% @tweets.each do |tweet| %>
         <div class="count text-center">
             <span><%=@count%>位(Retweet：<%= tweet.retweet_count %> Fav：<%= tweet.favorite_count%>)</span>
