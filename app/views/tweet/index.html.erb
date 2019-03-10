@@ -22,7 +22,10 @@
             <span><%= tweet.tweet_time.strftime("%Y年%m月%d日 %H時%M分") %></span>
         </div>
 
-        <div class="well well-lg"><%= link_to "#{tweet.tweet}", "#{tweet.tweet_url}", :style=>"color:black;" %></div>
+        <div class="well well-lg">
+            <span><%= tweet.tweet %></span>
+            <%= link_to "リンク", "#{tweet.tweet_url}", :style=>"color:blue;" %>
+        </div>
 
         <% @count += 1 %>
         <hr>
