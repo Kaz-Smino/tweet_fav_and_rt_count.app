@@ -3,8 +3,7 @@
 <% if user_signed_in? %> <!-- ユーザーがログインしているか調べる -->
   <!-- ユーザーがログインしていた時の処理 -->
   <span class="display-4">現在 <%= current_user.name %> さんがログインしています</span><br>
-  <h4> メールアドレス： <%= current_user.email %> </h4>
-  <%= link_to "ログアウト", destroy_user_session_path, method: :delete %> <!-- ログアウトをする -->
+   <%= link_to "ランキングを表示", new_user_session_path, class: 'post' %>
 <% else %>
   <!-- ユーザーがログインしていなかった時の処理 -->
   <span class="display-4">現在ログインしていません</span><br>

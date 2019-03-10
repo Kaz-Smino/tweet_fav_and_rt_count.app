@@ -9,16 +9,17 @@
   </head>
 
   <body>
-    <!-- Site Name -->
-      <div class="sitename">
-        <div class="left">
-          <a href="#">エンジニアインフルエンサーランキング</a>
-          <p1 class="right"><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn btn-default' %></p1><br>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 center-contents">
+          <a href="/">エンジニアインフルエンサーランキング</a>
         </div>
       </div>
+    </div>
+
     <!-- Static navbar -->
       <div class="navbar navbar-default" role="navigation">
-        <div class="container">
+        <div class="container-fluid">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
@@ -29,10 +30,10 @@
           </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-            <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+            <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
             <li><a href="#about"><i class="fa fa-info"></i> About</a></li>
-            <li><a href="#about"><i class="fa fa-jpy"></i> Price</a></li>
-            <li><a href="#contact"><i class="fa fa-comments-o"></i> Contact</a></li>
+            <li><a href="#price"><i class="fa fa-jpy"></i> Price</a></li>
+            <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
