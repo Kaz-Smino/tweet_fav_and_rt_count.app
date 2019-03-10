@@ -1,13 +1,23 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+[class$="-contents"] {
+  color:white;
+  height:100px;
+  font-size:1rem;
+  text-align:center;
+  line-height:100px;
+}
+.center-contents {
+  background:rgb(31, 204, 167);
+}
 .p1{
   margin:15px 0 15px;
   }
-  .center {
+.center {
     margin-left: auto;
     margin-right: auto;
-}
+  }
   .sitename a{
   font-size: 1.0em;
   color: inherit;
