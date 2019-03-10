@@ -3,11 +3,7 @@
     <link rel="stylesheet" href="members.scss" type="text/css">
 </head>
 <body>
-    <span class="display-4">現在 <%= current_user.name %> さんがログインしています</span><br>
-    <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn btn-default' %><br>
     <% @count = @tweets.offset_value + 1 %>
-
-    <%= paginate @tweets %><br>
     <% @tweets.each do |tweet| %>
         <div class="count text-center">
             <span><%=@count%>位(Retweet：<%= tweet.retweet_count %> Fav：<%= tweet.favorite_count%>)</span>
@@ -28,5 +24,4 @@
         <% @count += 1 %>
         <hr>
     <% end %>
-    <%= paginate @tweets %>
 </body>
