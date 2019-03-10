@@ -3,6 +3,9 @@
     <link rel="stylesheet" href="members.scss" type="text/css">
 </head>
 <body>
+    <div class="text-center">
+      <%=paginate @tweets%>
+    </div>
     <% @count = @tweets.offset_value + 1 %>
     <% @tweets.each do |tweet| %>
         <div class="count text-center">
@@ -24,4 +27,7 @@
         <% @count += 1 %>
         <hr>
     <% end %>
+    <div class="text-center">
+      <%=paginate @tweets%>
+    </div>
 </body>
