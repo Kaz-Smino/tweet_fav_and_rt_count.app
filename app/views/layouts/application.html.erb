@@ -15,7 +15,7 @@
           <a href="#">エンジニアtweetランキング</a>
         </div>
         <div class="container">
-          <span class="display-4">現在 <%= current_user.name %> さんがログインしています</span>
+          <%# <span class="display-4">現在 <%= current_user.name %> さんがログインしています</span> %>
           <p1><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn btn-default' %></p1><br>
         </div>
       </div>
