@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+  get '/', to: redirect('/tweet/index')
   root 'root#index'
   get 'root/index'
   get 'tweet/index'
