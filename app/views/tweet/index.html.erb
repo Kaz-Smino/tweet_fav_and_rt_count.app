@@ -6,31 +6,39 @@
     <div class="text-center">
       <%=paginate @tweets%>
     </div>
-    <% @count = @tweets.offset_value + 1 %>
-    <% @tweets.each do |tweet| %>
-        <div class="count text-center">
-            <span><%=@count%>位(Retweet：<%= tweet.retweet_count %> Fav：<%= tweet.favorite_count%>)</span>
+
+    <!-- ▼twitter風ここから -->
+    <div class="twitter__container">
+        <!-- タイトル -->
+        <div class="twitter__title">
+        <span class="twitter-logo"></span>
         </div>
-
-        <img src="<%= tweet.user_image %>" alt="プロフィール画像" class="img-responsive center-block">
-
-        <div class="user text-center ">
-            <span><%= link_to "#{tweet.name}", "#{tweet.url}" %></span>
+        <!-- ▼タイムラインエリア scrollを外すと高さ固定解除 -->
+        <div class="twitter__contents scroll">
+            <% @count = @tweets.offset_value + 1 %>
+            <% @tweets.each do |tweet| %>
+                    <div class="twitter__block">
+                        <figure>
+                            <img src="<%= tweet.user_image %>" />
+                        </figure>
+                        <div class="twitter__block-text">
+                            <div class="name"><%=tweet.name%><span class="name_reply"><<%=tweet.user_name%>></span></div>
+                            <div class="date"><%= tweet.tweet_time.strftime("%Y年%m月%d日 %H時%M分") %></div>
+                            <div class="text">
+                            <%= tweet.tweet %> <%= link_to "元URL", "#{tweet.tweet_url}", :style=>"color:blue;" %><br>
+                            </div>
+                            <div class="twitter__icon">
+                                <span class="twitter-bubble"></span>
+                                <span class="twitter-loop">RT<%= tweet.retweet_count %></span>
+                                <span class="twitter-heart">♡<%= tweet.favorite_count%></span>
+                            </div>
+                        </div>
+                    </div>
+                <% @count += 1 %>
+            <% end %>
         </div>
-
-        <div class="time text-center">
-            <span><%= tweet.tweet_time.strftime("%Y年%m月%d日 %H時%M分") %></span>
-        </div>
-
-        <div class="well well-lg">
-            <span><%= tweet.tweet %></span>
-            <%= link_to "元URL", "#{tweet.tweet_url}", :style=>"color:blue;" %>
-        </div>
-
-        <% @count += 1 %>
-        <hr>
-    <% end %>
+    </div>
     <div class="text-center">
-      <%=paginate @tweets%>
+        <%=paginate @tweets%>
     </div>
 </body>
