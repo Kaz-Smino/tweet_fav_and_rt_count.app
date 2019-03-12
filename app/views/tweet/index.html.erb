@@ -34,7 +34,7 @@
                             <div class="date">
                                 <% if minutes_ago < 60 %>
                                     <%= link_to "#{minutes_ago.floor}分", "#{tweet.tweet_url}", :style=>"color:blue;" %><br>
-                                <% elsif hours_ago < 60 %>
+                                <% elsif hours_ago < 24 %>
                                     <%= link_to "#{hours_ago.floor}時間", "#{tweet.tweet_url}", :style=>"color:blue;" %><br>
                                 <% elsif days_ago < 3 %>
                                     <%= link_to "#{days_ago.floor}日", "#{tweet.tweet_url}", :style=>"color:blue;" %><br>
