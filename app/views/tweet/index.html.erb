@@ -17,16 +17,28 @@
         <div class="twitter__contents scroll">
             <% @count = @tweets.offset_value + 1 %>
             <% @tweets.each do |tweet| %>
+                <% seconds_ago = Time.now - tweet.tweet_time %>
+                <% minutes_ago = seconds_ago / 60%>
+                <% hours_ago = minutes_ago / 60 %>
+                <% days_ago = hours_ago / 24 %>
+
+                <% if seconds_ago < 60 * 60 * 24 * 3 %> 
                     <div class="twitter__block">
                         <figure>
                             <img src="<%= tweet.user_image %>" />
                         </figure>
                         <div class="twitter__block-text">
                             <div class="name">
-                                <%= link_to "#{tweet.name}", "#{tweet.url}" %><span class="name_reply"><<%=tweet.user_name%>></span>
+                                <%= link_to "#{tweet.name.truncate(14)}", "#{tweet.url}" %><span class="name_reply"><<%=tweet.user_name%>></span>
                             </div>
                             <div class="date">
-                                <%= link_to tweet.tweet_time.strftime("%Y年%m月%d日 %H時%M分"), "#{tweet.tweet_url}", :style=>"color:blue;" %><br>
+                                <% if minutes_ago < 60 %>
+                                    <%= link_to "#{minutes_ago.floor}分", "#{tweet.tweet_url}", :style=>"color:blue;" %><br>
+                                <% elsif hours_ago < 60 %>
+                                    <%= link_to "#{hours_ago.floor}時間", "#{tweet.tweet_url}", :style=>"color:blue;" %><br>
+                                <% elsif days_ago < 3 %>
+                                    <%= link_to "#{days_ago.floor}日", "#{tweet.tweet_url}", :style=>"color:blue;" %><br>
+                                <% end %>
                             </div>
                             <div class="text">
                             <%= tweet.tweet %><br>
@@ -38,6 +50,7 @@
                             </div>
                         </div>
                     </div>
+                <% end %>
                 <% @count += 1 %>
             <% end %>
         </div>
