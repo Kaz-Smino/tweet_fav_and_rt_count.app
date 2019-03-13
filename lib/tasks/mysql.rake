@@ -75,6 +75,7 @@ namespace :mysql do
         tweet.update(favorite_count: lt.favorite_count)
         tweet.update(retweet_count: lt.retweet_count)
         tweet.update(tweet_point: lt.favorite_count + lt.retweet_count)
+        tweet.update(user_image: lt.user.profile_image_url)
         @count_update_tweet += 1
       end
     end
