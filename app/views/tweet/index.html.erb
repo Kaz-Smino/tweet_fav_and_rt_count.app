@@ -29,7 +29,7 @@
                         </figure>
                         <div class="twitter__block-text">
                             <div class="name">
-                                <%= link_to "#{tweet.name.truncate(14)}", "#{tweet.url}" %><span class="name_reply"><<%=tweet.user_name%>></span>
+                                <%= link_to "#{tweet.name.truncate(12)}", "#{tweet.url}" %><span class="name_reply"><<%=tweet.user_name%>></span>
                             </div>
                             <div class="date">
                                 <% if minutes_ago < 60 %>
