@@ -18,6 +18,13 @@
     </div>
 
     <!-- Static navbar -->
+      <% flash.each do |name, msg| %>
+        <div class="alert alert-primary" role="alert">
+          <a class="close" data-dismiss="alert">×</a>
+          <%= msg %>
+        </div>
+      <% end %>
+
       <div class="navbar navbar-default" role="navigation">
         <div class="container-fluid">
           <div class="navbar-header">
