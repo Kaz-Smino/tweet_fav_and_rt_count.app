@@ -30,3 +30,32 @@ ja:
       next: "次 &rsaquo;"
       previous: "&lsaquo; 前"
       truncate: "&hellip;"
+  activerecord:
+    attributes:
+      user:
+        name: 名前
+        password: パスワード
+        password_confirmation: パスワード確認
+        email: メールアドレス
+  flash:
+    new: 作成しました！
+    notice: "お知らせ"
+    updated: 更新しました！
+    failed: 失敗しました！
+    destroy: 削除しました！
+    login: ログインしました！
+    logout: ログアウトしました！
+    limited_access: 不正な侵入です！！
+    tag_follow: タグをフォローしました！
+    tag_not_follow: タグをフォローできませんでした。
+    tag_remove_follow: タグのフォローを解除しました！
+  
+
+  taken: "は既に使用されています。"
+  blank: "が入力されていません。"
+  too_short: "は%{count}文字以上に設定して下さい。"
+  too_long: "は%{count}文字以下に設定して下さい。"
+  invalid: "は有効でありません。"
+  confirmation: "が内容とあっていません。"
+
+
