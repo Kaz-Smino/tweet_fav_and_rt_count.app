@@ -3,13 +3,7 @@
     <link rel="stylesheet" href="members.scss" type="text/css">
 </head>
 <body>
-
-    <!-- ▼twitter風ここから -->
     <div class="twitter__container">
-        <!-- タイトル -->
-        <div class="twitter__title">
-        <span class="twitter-logo"></span>
-        </div>
         <!-- ▼タイムラインエリア scrollを外すと高さ固定解除 -->
         <div class="twitter__contents scroll">
             <% @count = @tweets.offset_value + 1 %>
@@ -26,24 +20,23 @@
                         </figure>
                         <div class="twitter__block-text">
                             <div class="name">
-                                <%= link_to "#{tweet.name.truncate(12)}", "#{tweet.url}" %><span class="name_reply"><<%=tweet.user_name%>></span>
+                                <%= link_to "#{(tweet.name + "@" + tweet.user_name).byteslice(0, 36).scrub('') + "..."}", "#{tweet.url}" %><span class="name_reply"><<%=tweet.user_name%>></span>
                             </div>
                             <div class="date">
                                 <% if minutes_ago < 60 %>
-                                    <%= link_to "#{minutes_ago.floor}分", "#{tweet.tweet_url}", :style=>"color:blue;" %><br>
+                                    <%= link_to "#{minutes_ago.floor}分", "#{tweet.tweet_url}", :style=>"color:gray;" %><br>
                                 <% elsif hours_ago < 24 %>
-                                    <%= link_to "#{hours_ago.floor}時間", "#{tweet.tweet_url}", :style=>"color:blue;" %><br>
+                                    <%= link_to "#{hours_ago.floor}時間", "#{tweet.tweet_url}", :style=>"color:gray;" %><br>
                                 <% elsif days_ago < 3 %>
-                                    <%= link_to "#{days_ago.floor}日", "#{tweet.tweet_url}", :style=>"color:blue;" %><br>
+                                    <%= link_to "#{days_ago.floor}日", "#{tweet.tweet_url}", :style=>"color:gray;" %><br>
                                 <% end %>
                             </div>
                             <div class="text">
                             <%= tweet.tweet.html_safe %><br>
                             </div>
                             <div class="twitter__icon">
-                                <span class="twitter-bubble"></span>
-                                <span class="twitter-loop">RT<%= tweet.retweet_count %></span>
                                 <span class="twitter-heart">♡<%= tweet.favorite_count%></span>
+                                <span class="twitter-loop">RT<%= tweet.retweet_count%></span>
                             </div>
                         </div>
                     </div>

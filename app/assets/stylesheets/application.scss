@@ -4,10 +4,10 @@
 
 [class$="-contents"] {
   color:white;
-  height:100px;
+  height:70px;
   font-size:1.6rem;
   text-align:center;
-  line-height:100px;
+  line-height:70px;
 }
 .center-contents {
   background:#58aeed;
@@ -31,7 +31,6 @@
   ul {
     text-align: right;
   }
-   
   li {
     display: inline;
   }
@@ -133,6 +132,9 @@ $baseColor:   #58aeed; //ベースカラー
             color: #8a9aa4;
             margin-left: 10px;
           }
+          .overflow-ellipsis {
+            text-overflow: ellipsis;
+          }
         }
 
         .date {
@@ -178,7 +180,7 @@ $baseColor:   #58aeed; //ベースカラー
               padding-left: 20px;
               background: url('../images/' + $icon + '.svg') left no-repeat;
               width: 20%;
-              float: left;
+              float: right;
               color: #8a9aa4;
             }
           }
