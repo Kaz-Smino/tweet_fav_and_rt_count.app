@@ -9,6 +9,13 @@
   </head>
 
   <body>
+    <% flash.each do |name, msg| %>
+      <div class="alert alert-primary" role="alert">
+        <a class="close" data-dismiss="alert">×</a>
+        <%= msg %>
+      </div>
+    <% end %>
+
     <div class="container-fluid">
       <div class="row">
         <div class="col-12 center-contents">
@@ -16,13 +23,6 @@
         </div>
       </div>
     </div>
-    
-    <% flash.each do |name, msg| %>
-      <div class="alert alert-primary" role="alert">
-        <a class="close" data-dismiss="alert">×</a>
-        <%= msg %>
-      </div>
-    <% end %>
 
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
