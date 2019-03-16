@@ -14,46 +14,26 @@
 }
 .p1{
   margin:15px 0 15px;
-  }
+}
 .center {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .sitename a{
+  margin-left: auto;
+  margin-right: auto;
+}
+.sitename a{
   font-size: 1.0em;
   color: inherit;
-  }
+}
    
   i{
   font-size: 1.0em;
   color: inherit;
   }
-   
-  .navbar .navbar-inner {
-  padding: 0;
+  ul {
+    text-align: right;
   }
    
-  .navbar .nav {
-  margin: 0;
-  display: table;
-  width: 100%;
-  }
-   
-  .navbar .nav li {
-  display: table-cell;
-  float: none;
-  }
-   
-  .navbar .nav li a {
-  font-weight: bold;
-  text-align: center;
-  border-left: 1px solid rgba(255, 255, 255, .75);
-  border-right: 1px solid rgba(0, 0, 0, .1);
-  }
-   
-  .navbar .nav li:last-child a {
-  border-right: 0;
-  border-radius: 0 3px 3px 0;
+  li {
+    display: inline;
   }
 
   @charset "UTF-8";
