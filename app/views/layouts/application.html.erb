@@ -3,33 +3,35 @@
   <head>
     <title>エンジニアインフルエンサーランキングランキング</title>
     <%= csrf_meta_tags %>
-    <meta  name="viewport" content="content="width=device-width,initial-scale=1.0">
+    <meta  name="viewport" content="width=device-width">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-      <% flash.each do |message_type, message| %>
-          <div class="alert alert-<%= message_type %>">
-            <%= message %>
-          </div>
-      <% end %>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12 center-contents">
-            <a href="/">エンジニアインフルエンサーランキング </a>
-          </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 center-contents">
+          <a href="/">エンジニアインフルエンサーランキング</a>
         </div>
       </div>
+    </div>
     
-      <%= yield %>
+    <% flash.each do |name, msg| %>
+      <div class="alert alert-primary" role="alert">
+        <a class="close" data-dismiss="alert">×</a>
+        <%= msg %>
+      </div>
+    <% end %>
 
-      <nav class="navbar navbar-default navbar-static-top">
-          <div class="container">
-              <ul class="nav navbar-nav", style="float:right;">
-                <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn-outline-light" %></li>
-              </ul>
-          </div>
-      </nav>
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <ul class="nav navbar-nav", style="float:right;">
+              <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn-outline-light" %></li>
+            </ul>
+        </div>
+    </nav>
+
+    <%= yield %>
   </body>
 </html>
