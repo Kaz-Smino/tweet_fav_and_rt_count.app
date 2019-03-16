@@ -20,7 +20,7 @@
                         </figure>
                         <div class="twitter__block-text">
                             <div class="name">
-                                <%= link_to "#{(tweet.name).byteslice(0, 42).scrub('') + "..."}", "#{tweet.url}" %><span class="name_reply"><<%=tweet.user_name%>></span>
+                                <%= link_to "#{(tweet.name).byteslice(0, 39).scrub('') + "..."}", "#{tweet.url}" %><span class="name_reply"><<%=tweet.user_name%>></span>
                             </div>
                             <div class="date">
                                 <% if minutes_ago < 60 %>
