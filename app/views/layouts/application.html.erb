@@ -26,6 +26,9 @@
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
             <ul class="nav navbar-nav", style="float:right;">
+              <li><%= link_to "ランキングを表示", tweet_index_path, class: "btn-outline-light" %></li>
+              <li><%= link_to "Timeline順", tweet_timeline_path, class: "btn-outline-light" %></li>
+              <li><%= link_to "ユーザー毎に表示(フォロワー数順)", tweet_followers_count_path, class: "btn-outline-light" %></li>
               <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn-outline-light" %></li>
             </ul>
         </div>

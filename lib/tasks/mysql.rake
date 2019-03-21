@@ -32,7 +32,7 @@ namespace :mysql do
                         tweet_point: tweet.favorite_count + tweet.retweet_count,
                         tweet_url: tweet.url, tweet_id: tweet.id, tweet_time: tweet.created_at,
                         user_image: tweet.user.profile_image_url, name: tweet.user.name,
-                        url: tweet.user.url)
+                        url: tweet.user.url, followers_count: tweet.user.followers_count)
             
           count_add_new_tweet += 1
         end
@@ -76,6 +76,7 @@ namespace :mysql do
         tweet.update(retweet_count: lt.retweet_count)
         tweet.update(tweet_point: lt.favorite_count + lt.retweet_count)
         tweet.update(user_image: lt.user.profile_image_url)
+        tweet.update(followers_count: lt.user.followers_count)
         @count_update_tweet += 1
       end
     end
