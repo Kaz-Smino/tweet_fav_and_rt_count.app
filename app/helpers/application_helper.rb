@@ -15,7 +15,7 @@ module ApplicationHelper
   end
 
   def within_1days?
-    if hours_ago < 60
+    if hours_ago < 24
       return true
     end
   end
