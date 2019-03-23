@@ -11,7 +11,7 @@ module ApplicationHelper
   end
 
   def hours_ago
-    @hours_ago = @seconds_ago / 3600
+    @hours_ago = @seconds_ago / (60 * 60)
   end
 
   def within_1days?
@@ -21,11 +21,11 @@ module ApplicationHelper
   end
 
   def days_ago
-    @days_ago = @seconds_ago / 86400
+    @days_ago = @seconds_ago / (60 * 60 * 24)
   end
 
   def within_1weeks?
-    if @seconds_ago < 691200 
+    if @seconds_ago < (60 * 60 * 24 * 8)
       return true
     end
   end
