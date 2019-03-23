@@ -1,0 +1,43 @@
+<div class="twitter__container">
+        <!-- ▼タイムラインエリア scrollを外すと高さ固定解除 -->
+        <div class="twitter__contents scroll">
+            <% @count = @tweets.offset_value + 1 %>
+            <% @tweets.each do |tweet| %>
+                <% @seconds_ago = Time.now - tweet.tweet_time %>
+
+                <% if within_1weeks?%> 
+                    <div class="twitter__block">
+                        <figure>
+                            <img src="<%= tweet.user_image %>" />
+                        </figure>
+                        <div class="twitter__block-text">
+                            <div class="name">
+                                <%= link_to "#{(tweet.name).byteslice(0, 30).scrub('') + "..."}", "#{tweet.url}" %><span class="name_reply"><<%=tweet.user_name%>></span>
+                            </div>
+                            <div class="date">
+                                <% if within_1hours? %>
+                                    <%= link_to "#{minutes_ago.to_i}分", "#{tweet.tweet_url}", :style=>"color:gray;" %><br>
+                                <% elsif within_1days? %>
+                                    <%= link_to "#{hours_ago.to_i}時間", "#{tweet.tweet_url}", :style=>"color:gray;" %><br>
+                                <% else %>
+                                    <%= link_to "#{days_ago.to_i}日", "#{tweet.tweet_url}", :style=>"color:gray;" %><br>
+                                <% end %>
+                            </div>
+                            <div class="text">
+                            <%= tweet.tweet.html_safe %><br>
+                            </div>
+                            <div class="twitter__icon">
+                                <span class="twitter-heart">♡<%= tweet.favorite_count%></span>
+                                <span class="twitter-loop">RT<%= tweet.retweet_count%></span>
+                            </div>
+                        </div>
+                    </div>
+                <% end %>
+            <% end %>
+        </div>
+    </div>
+    <div class="text-center">
+      <%=paginate @tweets%>
+    </div>
+
+    <div id="page_top"><a href="#"></a></div>
