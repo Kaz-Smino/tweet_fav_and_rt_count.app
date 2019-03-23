@@ -4,13 +4,13 @@
 
 [class$="-contents"] {
   color:white;
-  height:70px;
+  height:60px;
   font-size:1.6rem;
   text-align:center;
   line-height:70px;
 }
 .center-contents {
-  background:#58aeed;
+  background:#3f98ef;
 }
 .p1{
   margin:15px 0 15px;
@@ -238,4 +238,25 @@ h2{
   margin: auto;
   text-align: center;
   color: #3f98ef;
+}
+
+
+
+img {
+	max-width: 98%;
+	height: auto;
+}
+
+
+ul {
+  width: 100%;
+}
+
+.navbar-justified {
+  justify-content: center;
+}
+
+
+.text-center {
+  text-align: center;
 }

@@ -9,18 +9,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >   
-    <script src="jquery.js"></script>
-    <script src="jquery.infinitescroll.min.js"></script>
-    <script>
-    $(function(){
-      $('#twitter__container').infinitescroll({
-        navSelector  : ".navigation",
-        nextSelector : ".navigation a",
-        itemSelector : ".article"
-      });
-    });
-</script>
-
   </head>
 
   <body>
@@ -34,11 +22,11 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-12 center-contents">
-          <a href="/">インフル・エンジニア・ランク</a>
+          <%= image_tag "logo3.png" %>
         </div>
       </div>
     </div>
-    <div class="navbar navbar-default" role="navigation">	
+    <nav class="navbar navbar-default" role="navigation" style="background-color:#e3f2fd;">	
         <div class="container-fluid">	
           <div class="navbar-header">	
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">	
@@ -49,7 +37,7 @@
             </button>	
           </div>	
           <div class="navbar-collapse collapse">	
-            <ul class="nav navbar-nav", style="float:right;">
+            <ul class="nav navbar-nav navbar-justified">
               <li><%= link_to "ランキングを表示", tweet_index_path, class: "btn-outline-light" %></li>
               <li><%= link_to "Timeline順", tweet_timeline_path, class: "btn-outline-light" %></li>
               <li><%= link_to "ユーザー毎に表示(フォロワー数順)", tweet_followers_count_path, class: "btn-outline-light" %></li>
@@ -57,6 +45,6 @@
             </ul>
           </div><!--/.nav-collapse -->	
         </div>
-      </div>
+      </>
     <%= yield %>
 </html>
