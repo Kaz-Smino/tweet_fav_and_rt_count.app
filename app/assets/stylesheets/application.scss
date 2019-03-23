@@ -4,10 +4,10 @@
 
 [class$="-contents"] {
   color:white;
-  height:60px;
+  height:45px;
   font-size:1.6rem;
   text-align:center;
-  line-height:70px;
+  line-height:10px;
 }
 .center-contents {
   background:#3f98ef;
@@ -51,7 +51,7 @@ $baseColor:   #58aeed; //ベースカラー
   background: #ffffff;
   overflow: hidden;
   max-width: 590px;
-  margin: 20px auto;
+  margin: 0px auto;
   font-size: 100%;
   border: solid 1px #eeeeee;
 
@@ -127,6 +127,8 @@ $baseColor:   #58aeed; //ベースカラー
 
         .name {
           font-weight: bold;
+          a:hover { color:#8a9aa4; text-decoration:none }
+          a:active { color:#8a9aa4; text-decoration:none }
 
           .name_reply {
             color: #8a9aa4;
@@ -138,11 +140,13 @@ $baseColor:   #58aeed; //ベースカラー
         }
 
         .date {
+          font-weight: lighter;
           position: absolute;
           top:0;
           right: 20px;
           text-align:right;
-          color: #8a9aa4;
+          a:hover { color:#8a9aa4; text-decoration:none }
+          a:active { color:#8a9aa4; text-decoration:none }
         }
 
         .text {
@@ -248,15 +252,6 @@ img {
 }
 
 
-ul {
-  width: 100%;
-}
-
-.navbar-justified {
-  justify-content: center;
-}
-
-
-.text-center {
-  text-align: center;
+.navbar {
+  min-height: 20px !important
 }
