@@ -10,51 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_21_093643) do
+ActiveRecord::Schema.define(version: 2019_03_23_014756) do
 
-  create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.string "name", null: false
-    t.string "record_type", null: false
-    t.bigint "record_id", null: false
-    t.bigint "blob_id", null: false
-    t.datetime "created_at", null: false
-    t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
-    t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
-  end
-
-  create_table "active_storage_blobs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.string "key", null: false
-    t.string "filename", null: false
-    t.string "content_type"
-    t.text "metadata"
-    t.bigint "byte_size", null: false
-    t.string "checksum", null: false
-    t.datetime "created_at", null: false
-    t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
-  end
-
-  create_table "ranks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.string "title"
-    t.string "img"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "tweets", id: :integer, unsigned: true, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.datetime "tweet_time", null: false
-    t.text "tweet", null: false
-    t.integer "favorite_count", default: 0, null: false
-    t.integer "retweet_count", default: 0, null: false
-    t.string "user_name", default: "", null: false
-    t.text "tweet_url", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "tweet_id", default: "", null: false
-    t.integer "tweet_point", default: 0, null: false
-    t.string "user_image", default: "", null: false
+  create_table "tweets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.datetime "tweet_time"
+    t.text "tweet"
+    t.integer "favorite_count"
+    t.integer "retweet_count"
+    t.string "user_name"
+    t.text "tweet_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string "tweet_id"
+    t.integer "tweet_point"
     t.string "name"
     t.string "url"
     t.integer "followers_count"
+    t.string "user_image"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
@@ -70,5 +42,4 @@ ActiveRecord::Schema.define(version: 2019_03_21_093643) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
 end

@@ -38,6 +38,7 @@ fi
 
 /usr/local/bin/docker run --name appdb \
     -v $(pwd)/db:/docker-entrypoint-initdb.d \
+    -v $(pwd)/db/etc:/etc/mysql/conf.d \
     -e MYSQL_DATABASE=app_db \
     -e MYSQL_ALLOW_EMPTY_PASSWORD=yes \
     -e TZ=Asia/Tokyo \
