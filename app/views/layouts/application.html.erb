@@ -6,6 +6,10 @@
     <meta  name="viewport" content="width=device-width">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >   
+
   </head>
 
   <body>
@@ -35,5 +39,5 @@
     </nav>
 
     <%= yield %>
-    <p id="page-top" align="right"><a href="#wrap">ページトップに戻る</a></p>
+    <div id="page_top"><a href="#"></a></div>
 </html>
