@@ -24,7 +24,7 @@
                                     <%= link_to "#{@minutes_ago.to_i}分", "#{tweet.tweet_url}", :style=>"color:gray;" %><br>
                                 <% elsif within_1days? %>
                                     <%= link_to "#{@hours_ago.to_i}時間", "#{tweet.tweet_url}", :style=>"color:gray;" %><br>
-                                <% else %>
+                                <% elsif within_1weeks? %>
                                     <%= link_to "#{@days_ago.to_i}日", "#{tweet.tweet_url}", :style=>"color:gray;" %><br>
                                 <% end %>
                             </div>
