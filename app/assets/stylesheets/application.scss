@@ -149,9 +149,7 @@ $baseColor:   #58aeed; //ベースカラー
         }
 
         .text {
-
           margin: 5px 0;
-
           .in-pict img{
             border-radius: 20px;
             -webkit-border-radius: 20px;
@@ -168,13 +166,10 @@ $baseColor:   #58aeed; //ベースカラー
         ////////////////////////////////////////////*/
 
         .twitter__icon {
-
           br {
             display: none;
           }
-          
           $icons: 'twitter-bubble', 'twitter-heart', 'twitter-loop';
-
           @each $icon in $icons {
             .#{$icon} {
               width: 14px;
@@ -188,7 +183,6 @@ $baseColor:   #58aeed; //ベースカラー
             }
           }
         }
-
       }
     }
   }
@@ -196,8 +190,11 @@ $baseColor:   #58aeed; //ベースカラー
 
 
 h2{
+  font-size: 15px;
+  font-family: Hiragino Maru Gothic ProN;
+  color: #fff;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 17px;
 }
 #page_top{
   width: 90px;
@@ -218,7 +215,7 @@ h2{
   font-family: FontAwesome;
   content: '\f102';
   font-size: 25px;
-  color: #3f98ef;
+  color: #032d57;
   position: absolute;
   width: 25px;
   height: 25px;
@@ -232,7 +229,7 @@ h2{
 #page_top a::after{
   content: 'PAGE TOP';
   font-size: 13px;
-  color: #fff;
+  color: #032d57;
   position: absolute;
   top: 45px;
   bottom: 0;
@@ -240,21 +237,46 @@ h2{
   left: 0;
   margin: auto;
   text-align: center;
-  color: #3f98ef;
 }
 
 
 
 img {
-	max-width: 98%;
+	max-width: 90%;
 	height: auto;
 }
 
 
-.navbar {
-  min-height: 10px !important
-}
-
+.navbar .navbar-inner {
+  padding: 0;
+  }
+   
+  .navbar .nav {
+  margin: 0;
+  display: table;
+  width: 100%;
+  }
+   
+  .navbar .nav li {
+  display: table-cell;
+  float: none;
+  }
+   
+  .navbar .nav li a {
+  font-weight: bold;
+  text-align: center;
+  border-left: 1px solid rgba(255, 255, 255, .75);
+  border-right: 1px solid rgba(0, 0, 0, .1);
+  a:hover { color:#8a9aa4; text-decoration:none }
+  a:active { color:#8a9aa4; text-decoration:none }
+  }
+   
+  .navbar .nav li:last-child a {
+  border-right: 0;
+  border-radius: 0 3px 3px 0;
+  a:hover { color:#8a9aa4; text-decoration:none }
+  a:active { color:#8a9aa4; text-decoration:none }
+  }
 
 
 
@@ -263,5 +285,60 @@ html {
   min-height: 100%;
 }
 body {
-
 }
+
+
+
+
+
+
+
+
+
+/* Non essential CSS - Just for example centering */
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  }
+  
+  .center-outer {
+  display: table;
+  width: 100%;
+  height: 100%;
+  }
+  
+  .center-inner {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  }
+  
+  /* Essential CSS - Makes the effect work */
+  
+  body {
+  background-color: #3498db;
+  }
+  
+  .bubbles {
+  display: inline-block;
+  font-family: arial;
+  position: relative;
+  }
+  
+  .bubbles h1 {
+  position: relative;
+  margin: 1em 0 0;
+  font-family: 'Luckiest Guy', cursive;
+  color: #fff;
+  z-index: 2;
+  }
+  
+  .individual-bubble {
+  position: absolute;
+  border-radius: 100%;
+  bottom: 10px;
+  background-color: #fff;
+  z-index: 1;
+  }
