@@ -10,6 +10,11 @@
   </head>
 
   <body>
+    <div id="js-loader" class="loader">
+      <div class="loader-animation"></div>
+    </div>
+
+
     <% flash.each do |name, msg| %>
       <div class="alert alert-primary" role="alert">
         <a class="close" data-dismiss="alert">×</a>
@@ -39,10 +44,10 @@
         </div>	
         <div class="collapse navbar-collapse text-center">	
           <ul class="nav navbar-nav">
-            <li><%= link_to "ランキングを表示", tweet_index_path, class: "btn-outline-light" %></li>
-            <li><%= link_to "Timeline順", tweet_timeline_path, class: "btn-outline-light" %></li>
-            <li><%= link_to "ユーザー毎に表示(フォロワー数順)", tweet_followers_count_path, class: "btn-outline-light" %></li>
-            <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn-outline-light" %></li>
+            <li><%= link_to "ranking", tweet_index_path, class: "btn-outline-light" %></li>
+            <li><%= link_to "timeline", tweet_timeline_path, class: "btn-outline-light" %></li>
+            <li><%= link_to "user", tweet_followers_count_path, class: "btn-outline-light" %></li>
+            <li><%= link_to "log out", destroy_user_session_path, method: :delete, class: "btn-outline-light" %></li>
           </ul>
         </div><!--/.nav-collapse -->	
       </nav>
