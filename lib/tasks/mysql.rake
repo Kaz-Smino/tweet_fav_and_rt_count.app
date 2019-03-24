@@ -21,11 +21,8 @@ namespace :mysql do
 
     count_add_new_tweet = 0
 
-
-
     @client.list_timeline("engineer", count:1000, since_id:last_tweet_id).reverse_each do |tweet|  
-      unless tweet.retweet? 
-        unless tweet.reply?
+      unless tweet.retweet?
           Tweet.create(tweet: @client.status(tweet.id, { tweet_mode: "extended" }).attrs[:full_text],
                         user_name: tweet.user.screen_name, 
                         favorite_count: tweet.favorite_count, retweet_count: tweet.retweet_count, 
@@ -33,9 +30,7 @@ namespace :mysql do
                         tweet_url: tweet.url, tweet_id: tweet.id, tweet_time: tweet.created_at,
                         user_image: tweet.user.profile_image_url.to_s.sub(/_normal/, '_400x400'), name: tweet.user.name,
                         url: tweet.user.url, followers_count: tweet.user.followers_count)
-            
           count_add_new_tweet += 1
-        end
       end
     end
       
