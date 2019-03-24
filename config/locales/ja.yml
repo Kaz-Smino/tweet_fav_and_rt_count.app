@@ -1,61 +1,35 @@
 ja:
-  devise:
-    confirmations:
-      confirmed: 'アカウントを登録しました。'
-      send_instructions: 'アカウントの有効化について数分以内にメールでご連絡します。'
-      send_paranoid_instructions: "あなたのメールアドレスが登録済みの場合、本人確認用のメールが数分以内に送信されます。"
-    failure:
-      already_authenticated: 'すでにログインしています。'
-      inactive: 'アカウントが有効化されていません。メールに記載された手順にしたがって、アカウントを有効化してください。'
-      invalid: "%{authentication_keys} もしくはパスワードが不正です。"
-      locked: 'あなたのアカウントは凍結されています。'
-      last_attempt: 'あなたのアカウントが凍結される前に、複数回の操作がおこなわれています。'
-      not_found_in_database: "%{authentication_keys} もしくはパスワードが不正です。"
-      timeout: 'セッションがタイムアウトしました。もう一度ログインしてください。'
-      unauthenticated: 'アカウント登録もしくはログインしてください。'
-      unconfirmed: 'メールアドレスの本人確認が必要です。'
-  helpers:
-    page_entries_info:
-      more_pages:
-        display_entries: "<b>%{total}</b>中の%{entry_name}を表示しています <b>%{first} - %{last}</b>"
-      one_page:
-        display_entries:
-          one: "<b>%{count}</b>レコード表示中です %{entry_name}"
-          other: "<b>%{count}</b>レコード表示中です %{entry_name}"
-          zero: "レコードが見つかりませんでした %{entry_name}"
-  views:
-    pagination:
-      first: "&laquo; 最初"
-      last: "最後 &raquo;"
-      next: "次 &rsaquo;"
-      previous: "&lsaquo; 前"
-      truncate: "&hellip;"
   activerecord:
+    models:
+      book: 本
+      user: ユーザー
     attributes:
+      book:
+        title: 作品名
+        author: 著者名
+        created_at: 登録日時
+        updated_at: 更新日時
       user:
-        name: 名前
-        password: パスワード
-        password_confirmation: パスワード確認
         email: メールアドレス
-  flash:
-    new: 作成しました！
-    notice: "お知らせ"
-    updated: 更新しました！
-    failed: 失敗しました！
-    destroy: 削除しました！
-    login: ログインしました！
-    logout: ログアウトしました！
-    limited_access: 不正な侵入です！！
-    tag_follow: タグをフォローしました！
-    tag_not_follow: タグをフォローできませんでした。
-    tag_remove_follow: タグのフォローを解除しました！
-  
-
-  taken: "は既に使用されています。"
-  blank: "が入力されていません。"
-  too_short: "は%{count}文字以上に設定して下さい。"
-  too_long: "は%{count}文字以下に設定して下さい。"
-  invalid: "は有効でありません。"
-  confirmation: "が内容とあっていません。"
-
-
+        password: パスワード
+        password_confirmation: 確認用パスワード
+        current_password: 現在のパスワード
+  errors:
+      messages:
+        invalid: "が不正な値です。"
+        confirmation: "が一致しません。"
+        accepted: "を承諾してください。"
+        empty: "が記入されていません。"
+        blank: "が記入されていません。"
+        inclusion: "は一覧にありません。"
+        exclusion: "は予約されています。"
+        too_long: "は%{count}文字以内で記入してください。"
+        too_short: "は%{count}文字以上で記入してください。"
+        wrong_length: "は%{count}文字で記入してください。"
+        taken: "はすでに使用されています。"
+        not_a_number: "は数値で入力してください。"
+        greater_than: "は%{count}より大きい値を指定してください。"
+        greater_than_or_equal_to: "は%{count}以上の値を指定してください。"
+        equal_to: "は%{count}を指定してください。"
+        less_than: "は%{count}より小さい値を指定してください。"
+        less_than_or_equal_to: "は%{count}以下の値を指定してください。"

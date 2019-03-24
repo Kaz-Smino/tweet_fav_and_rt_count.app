@@ -1,8 +1,13 @@
 <%# <span class="display-4">ログイン画面</span><br> %>
 <% if user_signed_in? %> <!-- ユーザーがログインしているか調べる -->
   <!-- ユーザーがログインしていた時の処理 -->
-  <span class="display-4">現在 <%= current_user.name %> さんがログインしています</span><br>
-   <%= link_to "ランキングを表示", new_user_session_path, class: 'post' %>
+  <% if current_user.name.nil? %>
+    <span class="display-4">現在 <%= current_user.name %> さんがログインしています</span><br>
+    <%= link_to "ランキングを表示", new_user_session_path, class: 'post' %>
+  <% else %>
+    <span class="display-4">現在名無しさんがログインしています</span><br>
+    <%= link_to "ランキングを表示", new_user_session_path, class: 'post' %>
+  <% end %> 
 <% else %>
   <!-- ユーザーがログインしていなかった時の処理 -->
   <span class="display-4">現在ログインしていません</span><br>
