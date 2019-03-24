@@ -265,7 +265,7 @@ img {
   .navbar .nav li a {
   font-weight: bold;
   text-align: center;
-  border-left: 1px solid rgba(255, 255, 255, .75);
+  border-left: 1px solid rgba(255, 255, 255, 0.75);
   border-right: 1px solid rgba(0, 0, 0, .1);
   a:hover { color:#8a9aa4; text-decoration:none }
   a:active { color:#8a9aa4; text-decoration:none }
@@ -341,90 +341,4 @@ html, body {
   bottom: 10px;
   background-color: #fff;
   z-index: 1;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-  .loader{
-    background:#1bb;
-    height:100%;
-    left:0;
-    position:fixed;
-    top:0;
-    width:100%;
-    z-index:10;
-  }
-   
-  /* ローディングのアニメーション部分のCSS (https://projects.lukehaas.me/css-loaders/) */
-  .loader-animation,
-  .loader-animation:before,
-  .loader-animation:after {
-    background:#ffffff;
-    -webkit-animation:load1 1s infinite ease-in-out;
-    animation:load1 1s infinite ease-in-out;
-    width:1em;
-    height:4em;
-  }
-  .loader-animation {
-    height:10px;
-    left:50%;
-    margin:-5px 0 0 -5px;
-    position:absolute;
-    top:50%;
-    width:10px;
-    color:#ffffff;
-    text-indent:-9999em;
-    font-size:10px;
-    -webkit-transform:translateZ(0);
-    -ms-transform:translateZ(0);
-    transform:translateZ(0);
-    -webkit-animation-delay:-0.16s;
-    animation-delay:-0.16s;
-  }
-  .loader-animation:before,
-  .loader-animation:after {
-    position:absolute;
-    top:0;
-    content:'';
-  }
-  .loader-animation:before {
-    left:-1.5em;
-    -webkit-animation-delay:-0.32s;
-    animation-delay:-0.32s;
-  }
-  .loader-animation:after {
-    left:1.5em;
-  }
-  @-webkit-keyframes load1 {
-    0%,
-    80%,
-    100% {
-      box-shadow:0 0;
-      height:4em;
-    }
-    40% {
-      box-shadow:0 -2em;
-      height:5em;
-    }
-  }
-  @keyframes load1 {
-    0%,
-    80%,
-    100% {
-      box-shadow:0 0;
-      height:4em;
-    }
-    40% {
-      box-shadow:0 -2em;
-      height:5em;
-    }
   }

@@ -1,7 +1,4 @@
 <%# <span class="display-4">ログイン画面</span><br> %>
-<div id="js-loader" class="loader">
-  <div class="loader-animation"></div>
-</div>
 <% if user_signed_in? %> <!-- ユーザーがログインしているか調べる -->
   <!-- ユーザーがログインしていた時の処理 -->
   <span class="display-4">現在 <%= current_user.name %> さんがログインしています</span><br>
