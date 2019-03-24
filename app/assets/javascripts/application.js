@@ -104,7 +104,7 @@ jQuery(document).ready(function($){
 // ローディング画面をフェードインさせてページ遷移
 $(function(){
   // リンクをクリックしたときの処理。外部リンクやページ内移動のスクロールリンクなどではフェードアウトさせたくないので少し条件を加えてる。
-  $('a[href ^= "https://newstella.co.jp"]' + 'a[target != "_blank"]').click(function(){
+  $('a[href ^= "https://tweet-rtfav-count.herokuapp.com/"]' + 'a[target != "_blank"]').click(function(){
       var url = $(this).attr('href'); // クリックされたリンクのURLを取得
       $('#js-loader').fadeIn(600);    // ローディング画面をフェードイン
       setTimeout(function(){ location.href = url; }, 800); // URLにリンクする
