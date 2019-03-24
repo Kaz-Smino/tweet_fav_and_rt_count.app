@@ -18,35 +18,40 @@
     <% end %>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-12 center-contents">
-          <%= link_to image_tag("logo3.png"), "/" %>
+        <div class="center-outer">
+          <div class="center-inner">
+
+          <div class="bubbles">
+            <%= link_to image_tag("logo3.png"), "/" %>
+          </div>
         </div>
       </div>
     </div>
 
-    <nav class="navbar navbar-default" role="navigation" style="background-color:#e3f2fd;">	
-      <div class="navbar-header">	
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">	
-        <span class="sr-only">Toggle navigation</span>	
-        <span class="icon-bar"></span>	
-        <span class="icon-bar"></span>	
-        <span class="icon-bar"></span>	
-        </button>	
-      </div>	
-      <div class="collapse navbar-collapse text-center">	
-        <ul class="nav navbar-nav">
-          <li><%= link_to "ランキングを表示", tweet_index_path, class: "btn-outline-light" %></li>
-          <li><%= link_to "Timeline順", tweet_timeline_path, class: "btn-outline-light" %></li>
-          <li><%= link_to "ユーザー毎に表示(フォロワー数順)", tweet_followers_count_path, class: "btn-outline-light" %></li>
-          <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn-outline-light" %></li>
-        </ul>
-      </div><!--/.nav-collapse -->	
-    </nav>
-    <%= yield %>
-    <footer class="footer">
-      <div class="container">
-        <p>Copyright (C) 2019 suminofu0829 All Rights Reserved.</p>
-      </div>
-    </footer>
+      <nav class="navbar navbar-default" role="navigation" style="background-color:#e3f2fd;">	
+        <div class="navbar-header">	
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">	
+          <span class="sr-only">Toggle navigation</span>	
+          <span class="icon-bar"></span>	
+          <span class="icon-bar"></span>	
+          <span class="icon-bar"></span>	
+          </button>	
+        </div>	
+        <div class="collapse navbar-collapse text-center">	
+          <ul class="nav navbar-nav">
+            <li><%= link_to "ランキングを表示", tweet_index_path, class: "btn-outline-light" %></li>
+            <li><%= link_to "Timeline順", tweet_timeline_path, class: "btn-outline-light" %></li>
+            <li><%= link_to "ユーザー毎に表示(フォロワー数順)", tweet_followers_count_path, class: "btn-outline-light" %></li>
+            <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn-outline-light" %></li>
+          </ul>
+        </div><!--/.nav-collapse -->	
+      </nav>
+      <%= yield %>
+      <footer class="footer text-center">
+        <div class="container">
+          <h2>Copyright (C) 2019 suminofu0829 All Rights Reserved.</h2>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
