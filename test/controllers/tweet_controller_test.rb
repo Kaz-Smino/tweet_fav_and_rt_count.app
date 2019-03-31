@@ -1,8 +1,15 @@
 require 'test_helper'
 
-class TweetControllerTest < ActionDispatch::IntegrationTest
+class TweetControllerTest < ActionController::TestCase
+
+  include Devise::Test::ControllerHelpers
+  
+
   test "should get index" do
-    get tweet_index_url
+    @request.env['devise.mapping'] = Devise.mappings[:user]
+    sign_in users(:john)
+
+    get :index
     assert_response :success
   end
 
