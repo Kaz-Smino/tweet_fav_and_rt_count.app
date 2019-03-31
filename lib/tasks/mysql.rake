@@ -67,11 +67,13 @@ namespace :mysql do
       update_tweets = Tweet.find_by(tweet_id: lt.id)
       unless update_tweets.nil?
         tweet = Tweet.where(tweet_id: update_tweets.tweet_id)
-        tweet.update(favorite_count: lt.favorite_count)
-        tweet.update(retweet_count: lt.retweet_count)
-        tweet.update(tweet_point: lt.favorite_count + lt.retweet_count)
-        tweet.update(user_image: lt.user.profile_image_url.to_s.sub(/_normal/, '_400x400'))
-        tweet.update(followers_count: lt.user.followers_count)
+        tweet.update(
+          favorite_count: lt.favorite_count, 
+          retweet_count: lt.retweet_count,
+          tweet_point: lt.favorite_count + lt.retweet_count,
+          user_image: lt.user.profile_image_url.to_s.sub(/_normal/, '_400x400'),
+          followers_count: lt.user.followers_count
+        )
         @count_update_tweet += 1
       end
     end
