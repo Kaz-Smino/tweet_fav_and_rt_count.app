@@ -70,9 +70,7 @@ ja:
         sign_up: "アカウント登録"
     sessions:
       new:
-        signed_in: 'ログインしました。'
-        signed_out: 'ログアウトしました。'
-        already_signed_out: 'ログアウト済みです。'
+        sign_in: "ログイン"
     shared:
       links:
         back: "戻る"

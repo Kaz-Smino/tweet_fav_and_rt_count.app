@@ -14,12 +14,6 @@
   </head>
 
   <body>
-    <% flash.each do |name, msg| %>
-      <div class="alert alert-primary" role="alert">
-        <a class="close" data-dismiss="alert">×</a>
-        <h2><%= msg %></h2>
-      </div>
-    <% end %>
     <div class="container-fluid">
       <div class="row">
         <div class="center-outer">
@@ -52,6 +46,12 @@
           </ul>
         </div><!--/.nav-collapse -->	
       </nav>
+      <% flash.each do |name, msg| %>
+        <div class="alert alert-primary" role="alert">
+          <a class="close" data-dismiss="alert">×</a>
+          <h2><%= msg %></h2>
+        </div>
+      <% end %>
       <%= yield %>
       <footer class="footer text-center">
         <div class="container">
