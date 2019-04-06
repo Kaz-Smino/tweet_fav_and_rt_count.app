@@ -42,10 +42,13 @@
         </div>	
         <div class="collapse navbar-collapse text-center">	
           <ul class="nav navbar-nav">
-            <li><%= link_to "ranking", tweet_index_path, class: "btn-outline-light" %></li>
-            <li><%= link_to "timeline", tweet_timeline_path, class: "btn-outline-light" %></li>
-            <li><%= link_to "user", tweet_followers_count_path, class: "btn-outline-light" %></li>
-            <li><%= link_to "log out", destroy_user_session_path, method: :delete, class: "btn-outline-light" %></li>
+            <li><%= link_to "ランキング", tweet_index_path, class: "btn-outline-light" %></li>
+            <li><%= link_to "タイムライン", tweet_timeline_path, class: "btn-outline-light" %></li>
+            <% if user_signed_in? %>
+              <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn-outline-light" %></li>
+            <% else %>
+              <li><%= link_to "サインイン", new_user_session_path, method: :get, class: "btn-outline-light" %></li>
+            <% end %>
           </ul>
         </div><!--/.nav-collapse -->	
       </nav>

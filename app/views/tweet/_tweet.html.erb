@@ -1,3 +1,15 @@
+<% if user_signed_in? %> <!-- ユーザーがログインしているか調べる -->
+  <!-- ユーザーがログインしていた時の処理 -->
+  <% if current_user.name.nil? %>
+    <div class="center">
+        <p align="center"><b>現在TESTさんがログインしています</b></p>
+    </div>
+  <% else %>
+    <div class="center">
+        <p align="center"><b>現在 <%= current_user.name %> さんがログインしています</b></p>
+    </div>
+  <% end %> 
+<% end %>
 <div class="twitter__container">
         <!-- ▼タイムラインエリア scrollを外すと高さ固定解除 -->
         <div class="twitter__contents scroll">

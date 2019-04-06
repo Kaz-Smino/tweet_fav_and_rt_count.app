@@ -12,11 +12,10 @@ class ApplicationController < ActionController::Base
   end
   
   def after_sign_out_path_for(resource)
-    root_index_path
+    tweet_index_path
   end
 
-  before_action :authenticate_user!
-
+  
   add_flash_types :success, :info, :warning, :danger
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
