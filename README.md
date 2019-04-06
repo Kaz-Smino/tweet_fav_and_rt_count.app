@@ -1,4 +1,20 @@
-# README
+# README(作成中)
+
+## 1.アプリケーションの概要(基本的には１行で完結させる)
+
+## 2.アプリケーションの機能一覧
+(記事投稿機能、記事にコメントをつける機能、認証機能、ページネーション機能、など、
+そのアプリケーションが実装している機能の一覧を簡潔に記述する)
+
+## 3.アプリケーション内で使用している技術一覧
+(インフラには何を使っているのか(Herokuのようなpaasを使っているのか)、DBには何を使っているのか、セッション管理はどのように行なっているのか、画像アップロードはどういったライブラリを使っているのか、デプロイはどのように行なっているのか)
+など、ポートフォリオの中で使った主要な技術をここに記述します。
+
+2、３は別々に書かずに一緒に書くのがおすすめ。
+
+
+
+
 
 ## Configuration
 開発環境では`.env`ファイルを作成してください。`.env`ファイルに定義された値は環境変数として読み込まれます。
@@ -18,26 +34,3 @@ $ ./bin/create_db
 ```
 $ ./bin/create_db -f
 ```
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
