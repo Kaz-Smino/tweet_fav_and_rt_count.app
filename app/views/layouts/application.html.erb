@@ -35,10 +35,10 @@
         <li><a href="/inquiry">問い合わせ</a></li>
         <li><a href="/tweet/about">What Is イエラ？</a></li>
         <% if user_signed_in? %>
-              <li><a href="/users/sign_out">ログアウト</a></li>
-            <% else %>
-              <li><a href="/users/sign_in">サインイン</a></li>
-            <% end %>
+          <li><a href="/users/sign_out">ログアウト</a></li>
+        <% else %>
+          <li><a href="/users/sign_in">サインイン</a></li>
+        <% end %>
       </ul>
 
       <% flash.each do |name, msg| %>

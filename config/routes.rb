@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get 'root/index', to: redirect('/users/sign_in')
   get 'tweet/index'
 
+  delete 'devise/sessions', to: redirect('/users/sign_in')
+
   get 'tweet/timeline'
   get 'tweet/followers_count'
   get 'tweet/about'
