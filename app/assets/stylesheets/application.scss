@@ -50,7 +50,7 @@ $baseColor:   #02aa86; //ベースカラー
   padding:0;
   background: #ffffff;
   overflow: hidden;
-  max-width: 590px;
+  max-width: 100%;
   margin: 0px auto;
   font-size: 100%;
   border: solid 1px #eeeeee;
@@ -62,7 +62,7 @@ $baseColor:   #02aa86; //ベースカラー
   /* タイトル部分 */
   .twitter__title {
     background: $baseColor;
-    padding: 10px;
+    padding: 0px;
     text-align: center;
     font-size: 150%;
     color: #ffffff;
@@ -92,7 +92,7 @@ $baseColor:   #02aa86; //ベースカラー
     }
 
     .twitter__block {
-      // width: 100%;
+      width: 100%;
       display: block;
       padding: 10px;
       margin-bottom: 5px;
@@ -127,6 +127,7 @@ $baseColor:   #02aa86; //ベースカラー
 
         .name {
           font-weight: bold;
+          max-width: 75%;
           a:hover { color:#8a9aa4; text-decoration:none }
           a:active { color:#8a9aa4; text-decoration:none }
 
@@ -242,11 +243,9 @@ h2{
 
 
 img {
-	width: 320px;
+	width: 318px;
 	height: 310px;
 }
-
-
 
 
 html {
@@ -274,7 +273,7 @@ html, body {
   
   .center-outer {
   display: table;
-  width: 100%;
+  width: 95%;
   height: 100%;
   }
   
@@ -282,6 +281,7 @@ html, body {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
+  width: 95%;
   }
   
   /* Essential CSS - Makes the effect work */
@@ -294,7 +294,7 @@ html, body {
   display: inline-block;
   font-family: arial;
   position: relative;
-  width: 100%;
+  width: 99%;
   height: 100%;
   }
   
@@ -308,7 +308,7 @@ html, body {
   
   .individual-bubble {
   position: absolute;
-  border-radius: 100%;
+  border-radius: 99%;
   bottom: 10px;
   background-color: #02aa86;
   z-index: 1;
@@ -323,7 +323,7 @@ html, body {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 200px;
+    width: 90%;
     background-color: #f1f1f1;
     position: relative;
     overflow: auto;
@@ -332,11 +332,11 @@ html, body {
   ul.sidenav li a {
     display: block;
     color: #000000;
-    padding: 8px 16px;
+    padding: 8px 0px;
     text-decoration: none;
   }
   ul.sidenav li a.active {
-    background-color: #da3c41;
+    background-color: #02aa86;
     color: white;
   }
   ul.sidenav li a:hover:not(.active) {
@@ -345,7 +345,7 @@ html, body {
   }
   div.content {
     margin-left: 25%;
-    padding: 1px 16px;
+    padding: 1px 0px;
     height: 1000px;
   }
   @media screen and (max-width: 5000px) {
@@ -359,10 +359,10 @@ html, body {
       padding: 15px;
     }
     div.content {
-      margin-left: 1;
+      margin-left: 0;
     }
   }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 320px) {
     ul.sidenav li a {
       text-align: center;
       float: none;
