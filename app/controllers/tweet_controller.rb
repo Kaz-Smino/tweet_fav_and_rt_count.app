@@ -15,6 +15,9 @@ class TweetController < ApplicationController
     @tweets = Tweet.where(tweet_time: range).order("followers_count desc,tweet_time desc, followers_count is null asc").page(params[:page]).per(200)
   end
 
-  before_action :authenticate_user!, except: [:index,:timeline]
+  def about
+  end
+
+  before_action :authenticate_user!, except: [:index,:timeline,:about]
 
 end

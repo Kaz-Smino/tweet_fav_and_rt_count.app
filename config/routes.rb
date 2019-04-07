@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   get 'tweet/timeline'
   get 'tweet/followers_count'
+  get 'tweet/about'
 
   root :to => "top#index"
 
