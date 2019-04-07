@@ -28,27 +28,19 @@
         </div>
       </div>
 
-      <nav class="navbar navbar-default" role="navigation" style="background-color:#02aa86;">	
-        <div class="navbar-header">	
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">	
-          <span class="sr-only">Toggle navigation</span>	
-          <span class="icon-bar"></span>	
-          <span class="icon-bar"></span>	
-          <span class="icon-bar"></span>	
-          </button>	
-        </div>	
-        <div class="collapse navbar-collapse text-center">	
-          <ul class="nav navbar-nav">
-            <li><%= link_to "ランキング", tweet_index_path, class: "btn-outline-light" %></li>
-            <li><%= link_to "タイムライン", tweet_timeline_path, class: "btn-outline-light" %></li>
-            <% if user_signed_in? %>
-              <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn-outline-light" %></li>
+      <ul class="sidenav">
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="/tweet/index">ランキング</a></li>
+        <li><a href="/tweet/timeline">タイムライン</a></li>
+        <li><a href="#contact">問い合わせ</a></li>
+        <li><a href="#about">What Is イエラ？</a></li>
+        <% if user_signed_in? %>
+              <li><a href="/users/sign_out">ログアウト</a></li>
             <% else %>
-              <li><%= link_to "サインイン", new_user_session_path, method: :get, class: "btn-outline-light" %></li>
+              <li><a href="/users/sign_in">サインイン</a></li>
             <% end %>
-          </ul>
-        </div><!--/.nav-collapse -->	
-      </nav>
+      </ul>
+
       <% flash.each do |name, msg| %>
         <div class="alert alert-primary" role="alert">
           <a class="close" data-dismiss="alert">×</a>
