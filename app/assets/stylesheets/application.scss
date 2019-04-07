@@ -199,7 +199,7 @@ h2{
 }
 #page_top{
   width: 90px;
-  height: 90px;
+  height: 40px;
   position: fixed;
   right: 0;
   bottom: 50px;
@@ -216,7 +216,7 @@ h2{
   font-family: FontAwesome;
   content: '\f102';
   font-size: 25px;
-  color: #02aa86;
+  color: #0b2a58;
   position: absolute;
   width: 25px;
   height: 25px;
@@ -230,7 +230,7 @@ h2{
 #page_top a::after{
   content: 'PAGE TOP';
   font-size: 13px;
-  color: #02aa86;
+  color: #0b2a58;
   position: absolute;
   top: 45px;
   bottom: 0;
