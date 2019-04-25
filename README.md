@@ -4,7 +4,7 @@
 
 ## Description
 
-Get the timeline of the listed Twitter users, and display them in descending order of total value of retweets and favorites among the tweets of the last week.
+Get the timeline of the listed Twitter users, and display them in descending order of total value of retweets and favorites among the tweets of the last 7days.
 
 (Persons who disseminate information mainly to beginners in programming and those who are engaged in career change to engineers are registered in the list)
 
@@ -51,7 +51,8 @@ $ ./bin/create_db
 
 ```
 $ ./bin/create_db -f
- 
+```
+
 # Licence
 This software is released under the MIT License, see LICENSE.
 
