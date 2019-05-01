@@ -1,5 +1,5 @@
  ## IERA(イエラ)
- `https://img.shields.io/gem/v/formatador.svg`
+
  
 
 - URL: [http://iera.suminofu.com/](http://iera.suminofu.com/)
