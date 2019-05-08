@@ -41,7 +41,7 @@ $ ./bin/create_db -f
 
 ## 設定(Heroku Scheduler)
 Heroku Scheduler([https://devcenter.heroku.com/articles/scheduler](https://devcenter.heroku.com/articles/scheduler))で
-10分毎にRakeタスク([mysql.rake](https://github.com/suminofu0829/tweet_fav_and_rt_count.app/blob/master/lib/tasks/mysql.rake "mysql.rake"))をパッチ処理するよう設定します。
+10分毎にRakeタスク([mysql.rake](https://github.com/suminofu0829/tweet_fav_and_rt_count.app/blob/master/lib/tasks/mysql.rake "mysql.rake"))をバッチ処理するように設定して下さい。
 
 DBに新たなtweetを追加する
 ```
