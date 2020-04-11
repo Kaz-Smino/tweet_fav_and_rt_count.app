@@ -2,8 +2,8 @@
 
  
 
-- URL: [http://iera.suminofu.com/](http://iera.suminofu.com/)
-- テストユーザーログイン情報: Email: test1@yahoo.co.jp, Password: 111111
+- ~~URL: [http://iera.suminofu.com/](http://iera.suminofu.com/)~~
+- ~~テストユーザーログイン情報: Email: test1@yahoo.co.jp, Password: 111111~~
 
  ## コンセプト
 プログラミング初学者・Web業界への転職活動中の方々へ向けて情報発信するサービスです。
