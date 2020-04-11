@@ -199,8 +199,8 @@ GEM
       slop (~> 3.4)
       spoon (~> 0.0)
     public_suffix (3.0.3)
-    puma (3.12.0)
-    puma (3.12.0-java)
+    puma (3.12.4)
+    puma (3.12.4-java)
     rack (2.0.6)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -352,7 +352,7 @@ DEPENDENCIES
   mysql2 (~> 0.5.2)
   pg
   pry (~> 0.10.3)
-  puma (~> 3.11)
+  puma (~> 3.12)
   rails (~> 5.2.2)
   rails-i18n
   sass-rails (~> 5.0)
